@@ -232,6 +232,7 @@ li {
 .header-imagen {
     position: relative;
     background-image: url(../img/header.jpg);
+    z-index: 1;
     height: 100vh;
     clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
     background-attachment: fixed;
