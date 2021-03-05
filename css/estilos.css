@@ -230,6 +230,7 @@ li {
 /** HEADER**/
 
 .header-imagen {
+    position: relative;
     background-image: url(../img/header.jpg);
     height: 100vh;
     clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
@@ -460,6 +461,7 @@ li {
 }
 
 .imagen-fondo-seccion {
+    position: relative;
     background-image: url(../img/header.jpg);
     height: 50vh;
 }
