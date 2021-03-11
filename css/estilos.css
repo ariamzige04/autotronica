@@ -255,9 +255,7 @@ li {
 
 .header-imagen {
     background-image: url(../img/header.jpg);
-    height: 100vh;
-    min-height: 100vh;
-    max-height: 100vh;
+    position: relative;
     background-attachment: fixed;
 }
 
@@ -268,7 +266,7 @@ li {
 }
 
 .color-fondo-oscuro {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .header-centar-padre {
