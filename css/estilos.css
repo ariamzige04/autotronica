@@ -36,7 +36,6 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     font-family: var(--fuenteprincipal);
-    transition: .4s all!important;
 }
 
 
@@ -255,11 +254,8 @@ li {
 
 .header-imagen {
     background-image: url(../img/header.jpg);
-    position: relative;
-    background-attachment: fixed;
     height: 100vh;
-    min-height: 60rem;
-    min-height: 100vh;
+    background-attachment: fixed;
 }
 
 .imagen-fondo {
@@ -277,7 +273,6 @@ li {
     justify-content: end;
     align-items: center;
     height: 100vh;
-    min-height: 100vh;
 }
 
 .hader-dos-columnas p,
@@ -333,35 +328,6 @@ li {
     color: var(--blanco);
     opacity: .95;
     box-shadow: 0px 1px 10px 0px rgb(255 255 255 / 59%);
-}
-
-.boton-volver-arriba {
-    width: 4rem;
-    height: 4rem;
-    border: 2px solid var(--primario);
-    border-radius: 50%;
-    position: fixed;
-    left: 1rem;
-    bottom: 1rem;
-    background-color: var(--secundario);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: var(--transition);
-    z-index: 10000;
-    opacity: .95;
-    box-shadow: 0px 7px 20px 2px rgb(0 0 0 / 62%);
-}
-
-.boton-volver-arriba i {
-    font-size: var(--tamañofuente);
-    color: var(--blanco);
-    text-align: center;
-}
-
-.boton-volver-arriba:hover {
-    background-color: var(--negro-claro);
-    opacity: 1;
 }
 
 .grid-main-dos-c {
@@ -540,7 +506,6 @@ li {
 @media (min-width: 550px) {
     .imagen-fondo-dos {
         height: 50vh;
-        min-height: 50vh;
     }
 }
 
@@ -570,8 +535,6 @@ li {
 .imagen-fondo-seccion {
     background-image: url(../img/header.jpg);
     height: 50vh;
-    min-height: 50rem;
-    min-height: 50vh;
 }
 
 @media (min-width: 900px) {
@@ -607,8 +570,6 @@ li {
 .imagen-fondo-nosotros {
     background-image: url(../img/header.jpg);
     height: 50vh;
-    min-height: 50rem;
-    min-height: 50vh;
 }
 
 .fondo-negro-nosotros {
@@ -669,8 +630,6 @@ li {
 .imagen-seccion-nosotros {
     background-image: url(../img/header.jpg);
     height: 40vh;
-    min-height: 30rem;
-    min-height: 40vh;
     width: 100%;
 }
 
@@ -697,8 +656,6 @@ CONTACTO**/
 .imagen-fondo-contacto {
     background-image: url(../img/header.jpg);
     height: 50vh;
-    min-height: 30rem;
-    min-height: 50vh;
 }
 
 .imagen-fondo-contacto h1 {
@@ -749,8 +706,6 @@ CONTACTO**/
     left: 0;
     right: 0;
     height: 50vh;
-    min-height: 30rem;
-    min-height: 50vh;
 }
 
 .mapa iframe {
