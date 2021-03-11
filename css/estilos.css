@@ -257,6 +257,9 @@ li {
     background-image: url(../img/header.jpg);
     position: relative;
     background-attachment: fixed;
+    height: 100vh;
+    min-height: 60rem;
+    min-height: 100vh;
 }
 
 .imagen-fondo {
@@ -275,7 +278,6 @@ li {
     align-items: center;
     height: 100vh;
     min-height: 100vh;
-    max-height: 100vh;
 }
 
 .hader-dos-columnas p,
@@ -539,7 +541,6 @@ li {
     .imagen-fondo-dos {
         height: 50vh;
         min-height: 50vh;
-        max-height: 50vh;
     }
 }
 
@@ -569,8 +570,8 @@ li {
 .imagen-fondo-seccion {
     background-image: url(../img/header.jpg);
     height: 50vh;
+    min-height: 50rem;
     min-height: 50vh;
-    max-height: 50vh;
 }
 
 @media (min-width: 900px) {
@@ -606,8 +607,8 @@ li {
 .imagen-fondo-nosotros {
     background-image: url(../img/header.jpg);
     height: 50vh;
+    min-height: 50rem;
     min-height: 50vh;
-    max-height: 50vh;
 }
 
 .fondo-negro-nosotros {
@@ -668,8 +669,8 @@ li {
 .imagen-seccion-nosotros {
     background-image: url(../img/header.jpg);
     height: 40vh;
+    min-height: 30rem;
     min-height: 40vh;
-    max-height: 40vh;
     width: 100%;
 }
 
@@ -696,8 +697,8 @@ CONTACTO**/
 .imagen-fondo-contacto {
     background-image: url(../img/header.jpg);
     height: 50vh;
+    min-height: 30rem;
     min-height: 50vh;
-    max-height: 50vh;
 }
 
 .imagen-fondo-contacto h1 {
@@ -748,8 +749,8 @@ CONTACTO**/
     left: 0;
     right: 0;
     height: 50vh;
+    min-height: 30rem;
     min-height: 50vh;
-    max-height: 50vh;
 }
 
 .mapa iframe {
