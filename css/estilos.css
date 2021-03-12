@@ -261,7 +261,6 @@ li {
     background-image: url(../img/header.jpg);
     position: relative;
     min-height: 100%;
-    transition: 2s all;
     background-attachment: fixed;
     transform: none;
     height: -webkit-fill-available;
@@ -275,16 +274,15 @@ li {
 
 .color-fondo-oscuro {
     background-color: rgba(0, 0, 0, 0.6);
-    transition: 2s all;
     transform: none;
+    height: -webkit-fill-available;
 }
 
 .header-centar-padre {
     display: flex;
     justify-content: end;
     align-items: center;
-    min-height: 100vh;
-    transition: 2s all;
+    height: -webkit-fill-available;
     position: relative;
     left: 0;
     bottom: 0;
