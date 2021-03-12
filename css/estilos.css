@@ -17,7 +17,7 @@ html {
     --negro: #252525;
     --negro-claro: #2e2e2e;
     --tamañofuente: 2rem;
-    --transition: .4s all;
+    --transition: .4s all!important;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap');
@@ -254,7 +254,8 @@ li {
 
 .header-imagen {
     background-image: url(../img/header.jpg);
-    height: 100vh;
+    position: relative;
+    height: 100%;
     background-attachment: fixed;
 }
 
@@ -272,7 +273,11 @@ li {
     display: flex;
     justify-content: end;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 .hader-dos-columnas p,
@@ -324,10 +329,19 @@ li {
 }
 
 .boton:hover {
-    border: .5rem solid var(--gris);
+    border: .5rem solid var(--blanco);
     color: var(--blanco);
     opacity: .95;
     box-shadow: 0px 1px 10px 0px rgb(255 255 255 / 59%);
+}
+
+.boton i {
+    padding-left: 1rem;
+}
+
+.boton-flex i {
+    display: flex;
+    align-items: center;
 }
 
 .grid-main-dos-c {
