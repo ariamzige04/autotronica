@@ -19,6 +19,7 @@ html {
     --negro-claro: #2e2e2e;
     --tamañofuente: 2rem;
     --transition: .4s all!important;
+    --app-height: 100%;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap');
@@ -39,7 +40,7 @@ body {
     font-family: var(--fuenteprincipal);
     position: relative;
     width: 100%;
-    height: 100%
+    height: 100vh
 }
 
 
@@ -259,10 +260,11 @@ li {
 .header-imagen {
     background-image: url(../img/header.jpg);
     position: relative;
-    height: 100%;
+    min-height: 100%;
     transition: 2s all;
     background-attachment: fixed;
     transform: none;
+    height: -webkit-fill-available;
 }
 
 .imagen-fondo {
