@@ -256,6 +256,7 @@ li {
     background-image: url(../img/header.jpg);
     position: relative;
     height: 100%;
+    transition: 2s all;
     background-attachment: fixed;
 }
 
@@ -267,6 +268,7 @@ li {
 
 .color-fondo-oscuro {
     background-color: rgba(0, 0, 0, 0.6);
+    transition: 2s all;
 }
 
 .header-centar-padre {
@@ -274,6 +276,7 @@ li {
     justify-content: end;
     align-items: center;
     min-height: 100vh;
+    transition: 2s all;
     position: relative;
     left: 0;
     bottom: 0;
