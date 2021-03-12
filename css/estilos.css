@@ -261,7 +261,6 @@ li {
     background-image: url(../img/header.jpg);
     position: relative;
     min-height: 100%;
-    background-attachment: fixed;
     transform: none;
     height: -webkit-fill-available;
 }
