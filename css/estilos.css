@@ -258,6 +258,7 @@ li {
     height: 100%;
     transition: 2s all;
     background-attachment: fixed;
+    transform: none;
 }
 
 .imagen-fondo {
@@ -269,6 +270,7 @@ li {
 .color-fondo-oscuro {
     background-color: rgba(0, 0, 0, 0.6);
     transition: 2s all;
+    transform: none;
 }
 
 .header-centar-padre {
@@ -281,6 +283,7 @@ li {
     left: 0;
     bottom: 0;
     right: 0;
+    transform: none;
 }
 
 .hader-dos-columnas p,
