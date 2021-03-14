@@ -4,9 +4,6 @@ html {
     text-decoration: none;
     /** Reset para REMS - 62.5% = 10px de 16px **/
     background-color: #e9e9e9;
-    position: relative;
-    width: 100%;
-    height: 100%
 }
 
  :root {
@@ -19,7 +16,6 @@ html {
     --negro-claro: #2e2e2e;
     --tamañofuente: 2rem;
     --transition: .4s all!important;
-    --app-height: 100%;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap');
@@ -38,9 +34,6 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     font-family: var(--fuenteprincipal);
-    position: relative;
-    width: 100%;
-    height: 100vh
 }
 
 
@@ -157,12 +150,17 @@ li {
     opacity: .95;
 }
 
+.nav i {
+    padding-left: 1rem;
+}
+
 .muestra {
     transform: translateX(0);
 }
 
 .nav a {
     display: block;
+    font-size: var(--tamañofuente);
     color: var(--blanco);
     padding: 2rem 1rem;
     border: 2px solid transparent;
@@ -222,6 +220,7 @@ li {
         border-radius: 2px;
         transition: var(--transition);
         font-weight: bolder;
+        font-size: 1.6rem;
     }
     .nav a:last-of-type {
         margin-right: 0;
@@ -260,9 +259,14 @@ li {
 .header-imagen {
     background-image: url(../img/header.jpg);
     position: relative;
-    min-height: 100%;
-    transform: none;
-    height: -webkit-fill-available;
+    min-height: 40rem;
+    height: 100vh;
+}
+
+@media (min-width: 900px) {
+    .header-imagen {
+        background-attachment: fixed;
+    }
 }
 
 .imagen-fondo {
@@ -273,20 +277,13 @@ li {
 
 .color-fondo-oscuro {
     background-color: rgba(0, 0, 0, 0.6);
-    transform: none;
-    height: -webkit-fill-available;
 }
 
 .header-centar-padre {
     display: flex;
     justify-content: end;
     align-items: center;
-    height: -webkit-fill-available;
-    position: relative;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    transform: none;
+    height: 100vh;
 }
 
 .hader-dos-columnas p,
@@ -346,11 +343,16 @@ li {
 
 .boton i {
     padding-left: 1rem;
+    transition: var(--transition);
 }
 
 .boton-flex i {
     display: flex;
     align-items: center;
+}
+
+.boton:hover i {
+    color: var(--secundario);
 }
 
 .grid-main-dos-c {
@@ -502,6 +504,14 @@ li {
     opacity: .90;
 }
 
+.lista-diseño i {
+    transition: var(--transition);
+}
+
+.lista-diseño:hover i {
+    color: var(--primario);
+}
+
 .imagen-fondo-carro-herramientas {
     background-image: url(../img/carro-herramienta.jpg);
     height: 100%;
@@ -522,7 +532,6 @@ li {
 .imagen-fondo-dos {
     background-image: url(../img/header.jpg);
     height: auto;
-    background-attachment: fixed;
     margin: 2rem 0;
 }
 
@@ -568,7 +577,6 @@ li {
         row-gap: var(--tamañofuente);
     }
     .imagen-fondo-seccion {
-        background-image: url(../img/header.jpg);
         height: 100%;
     }
 }
@@ -595,6 +603,12 @@ li {
     height: 50vh;
 }
 
+@media (min-width: 900px) {
+    .imagen-fondo-nosotros {
+        background-attachment: fixed;
+    }
+}
+
 .fondo-negro-nosotros {
     height: 100%;
     display: flex;
@@ -613,8 +627,7 @@ li {
     }
 }
 
-.seccion-nosotros h2,
-.seccion-nosotros p {
+.seccion-nosotros h2 {
     text-align: center;
 }
 
@@ -622,6 +635,7 @@ li {
     .seccion-nosotros h2,
     .seccion-nosotros p {
         margin: 1rem 5rem;
+        text-align: center;
     }
 }
 
@@ -681,6 +695,12 @@ CONTACTO**/
     height: 50vh;
 }
 
+@media (min-width: 900px) {
+    .imagen-fondo-contacto {
+        background-attachment: fixed;
+    }
+}
+
 .imagen-fondo-contacto h1 {
     color: var(--blanco);
 }
@@ -720,7 +740,6 @@ CONTACTO**/
 
 .contacto-redes-sociales a:hover {
     color: var(--secundario);
-    box-shadow: 0 1px 5px 0px rgb(0 0 0 / 50%);
     border: 2px solid var(--primario);
 }
 
@@ -729,6 +748,7 @@ CONTACTO**/
     left: 0;
     right: 0;
     height: 50vh;
+    border: 3px solid var(--secundario);
 }
 
 .mapa iframe {
