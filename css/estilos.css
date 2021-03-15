@@ -539,7 +539,7 @@ li {
 }
 
 .imagen-fondo-dos {
-    background-image: url(../img/carro-negro-paisaje-compressed.jpg);
+    background-image: url(../img/carro-negro-inicio-mitad-compressed.jpg);
     height: auto;
     margin: 2rem 0;
 }
@@ -647,13 +647,13 @@ li {
 }
 
 .imagen-main-nosotros-uno {
-    background-image: url(../img/carro-blanco-reparacion.jpeg);
+    background-image: url(../img/carro-blanco-reparacion-compressed.jpg);
     height: 20rem;
     border-radius: 3px;
 }
 
 .imagen-main-nosotros-dos {
-    background-image: url(../img/carro-reparacion-con-compu.jpeg);
+    background-image: url(../img/carro-reparacion-con-compu-compressed.jpg);
     height: 20rem;
     border-radius: 3px;
 }
