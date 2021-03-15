@@ -264,8 +264,9 @@ li {
 .header-imagen {
     background-image: url(../img/350z-compressed.jpg);
     position: relative;
-    min-height: 40rem;
+    min-height: 400px;
     height: 100vh;
+    max-height: 825px;
 }
 
 @media (min-width: 900px) {
@@ -604,7 +605,9 @@ li {
 
 .imagen-fondo-nosotros {
     background-image: url(../img/carro\ azul-compressed.jpg);
+    min-height: 200px;
     height: 50vh;
+    max-height: 50rem;
 }
 
 .fondo-negro-nosotros {
@@ -702,7 +705,9 @@ CONTACTO**/
 
 .imagen-fondo-contacto {
     background-image: url(../img/seccion-contacto-compressed.jpg);
+    min-height: 200px;
     height: 50vh;
+    max-height: 50rem;
 }
 
 .imagen-fondo-contacto h1 {
