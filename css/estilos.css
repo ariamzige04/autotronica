@@ -632,7 +632,6 @@ li {
 @media (min-width: 600px) {
     .seccion-nosotros h2,
     .seccion-nosotros p {
-        margin: 1rem 5rem;
         text-align: center;
     }
 }
@@ -644,7 +643,19 @@ li {
 .main-nosotros h4,
 .main-nosotros p {
     color: var(--primario);
-    margin: 1rem 0;
+    margin: 2rem 0;
+}
+
+.imagen-main-nosotros-uno {
+    background-image: url(../img/carro-blanco-reparacion.jpeg);
+    height: 20rem;
+    border-radius: 3px;
+}
+
+.imagen-main-nosotros-dos {
+    background-image: url(../img/carro-reparacion-con-compu.jpeg);
+    height: 20rem;
+    border-radius: 3px;
 }
 
 .fondo-rojo {
