@@ -123,8 +123,13 @@ li {
 /* avegacion */
 
 .logo p {
-    padding-left: 2rem;
+    padding-left: var(--tamañofuente);
     color: var(--blanco)!important;
+    transition: var(--transition);
+}
+
+.logo p:hover {
+    color: var(--secundario)!important;
 }
 
 .nav-site {
