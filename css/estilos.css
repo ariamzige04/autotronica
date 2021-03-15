@@ -289,7 +289,9 @@ li {
     display: flex;
     justify-content: end;
     align-items: center;
+    min-height: 400px;
     height: 100vh;
+    max-height: 825px;
 }
 
 .hader-dos-columnas p,
