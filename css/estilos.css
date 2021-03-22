@@ -15,7 +15,7 @@ html {
     --negro: #252525;
     --negro-claro: #2e2e2e;
     --tamañofuente: 2rem;
-    --transition: .4s all!important;
+    --transition: .5s all!important;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap');
@@ -328,6 +328,9 @@ li {
     margin: auto;
 }
 
+
+/**boton **/
+
 .boton {
     display: inline-block;
     padding: 1.5rem 2rem;
@@ -364,6 +367,9 @@ li {
     color: var(--secundario);
 }
 
+
+/**boton fin**/
+
 .grid-main-dos-c {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -393,7 +399,7 @@ li {
     height: .5rem;
     border-radius: 1rem;
     margin: auto;
-    background: rgba(217, 48, 48, 1);
+    background: var(--secundario);
 }
 
 .alinear-texto-c {
@@ -607,7 +613,7 @@ li {
 /**NOSOTROS **/
 
 .imagen-fondo-nosotros {
-    background-image: url(../img/carro\ azul-compressed.jpg);
+    background-image: url(../img/carro-blanco-nosotros-dos.jpg);
     min-height: 200px;
     height: 50vh;
     max-height: 50rem;

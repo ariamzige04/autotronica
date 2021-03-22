@@ -4,8 +4,6 @@ html {
     text-decoration: none;
     /** Reset para REMS - 62.5% = 10px de 16px **/
     background-color: #e9e9e9;
-    width: 100%;
-    height: 100%
 }
 
  :root {
@@ -17,7 +15,7 @@ html {
     --negro: #252525;
     --negro-claro: #2e2e2e;
     --tamañofuente: 2rem;
-    --transition: .4s all;
+    --transition: .5s all!important;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap');
@@ -36,7 +34,6 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     font-family: var(--fuenteprincipal);
-    transition: .4s all!important;
 }
 
 
@@ -126,8 +123,13 @@ li {
 /* avegacion */
 
 .logo p {
-    padding-left: 2rem;
+    padding-left: var(--tamañofuente);
     color: var(--blanco)!important;
+    transition: var(--transition);
+}
+
+.logo p:hover {
+    color: var(--secundario)!important;
 }
 
 .nav-site {
@@ -153,12 +155,17 @@ li {
     opacity: .95;
 }
 
+.nav i {
+    padding-left: 1rem;
+}
+
 .muestra {
     transform: translateX(0);
 }
 
 .nav a {
     display: block;
+    font-size: var(--tamañofuente);
     color: var(--blanco);
     padding: 2rem 1rem;
     border: 2px solid transparent;
@@ -218,6 +225,7 @@ li {
         border-radius: 2px;
         transition: var(--transition);
         font-weight: bolder;
+        font-size: 1.6rem;
     }
     .nav a:last-of-type {
         margin-right: 0;
@@ -254,9 +262,18 @@ li {
 /** HEADER**/
 
 .header-imagen {
-    background-image: url(../img/header.jpg);
+    background-color: var(--negro-claro);
+    background-image: url(../img/350z-header.jpg);
+    position: relative;
+    min-height: 400px;
     height: 100vh;
-    background-attachment: fixed;
+    max-height: 825px;
+}
+
+@media (min-width: 900px) {
+    .header-imagen {
+        background-attachment: fixed;
+    }
 }
 
 .imagen-fondo {
@@ -266,14 +283,16 @@ li {
 }
 
 .color-fondo-oscuro {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.452);
 }
 
 .header-centar-padre {
     display: flex;
     justify-content: end;
     align-items: center;
+    min-height: 400px;
     height: 100vh;
+    max-height: 825px;
 }
 
 .hader-dos-columnas p,
@@ -309,6 +328,9 @@ li {
     margin: auto;
 }
 
+
+/**boton **/
+
 .boton {
     display: inline-block;
     padding: 1.5rem 2rem;
@@ -325,40 +347,28 @@ li {
 }
 
 .boton:hover {
-    border: .5rem solid var(--gris);
+    border: .5rem solid var(--blanco);
     color: var(--blanco);
     opacity: .95;
     box-shadow: 0px 1px 10px 0px rgb(255 255 255 / 59%);
 }
 
-.boton-volver-arriba {
-    width: 4rem;
-    height: 4rem;
-    border: 2px solid var(--primario);
-    border-radius: 50%;
-    position: fixed;
-    left: 1rem;
-    bottom: 1rem;
-    background-color: var(--secundario);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.boton i {
+    padding-left: 1rem;
     transition: var(--transition);
-    z-index: 10000;
-    opacity: .95;
-    box-shadow: 0px 7px 20px 2px rgb(0 0 0 / 62%);
 }
 
-.boton-volver-arriba i {
-    font-size: var(--tamañofuente);
-    color: var(--blanco);
-    text-align: center;
+.boton-flex i {
+    display: flex;
+    align-items: center;
 }
 
-.boton-volver-arriba:hover {
-    background-color: var(--negro-claro);
-    opacity: 1;
+.boton:hover i {
+    color: var(--secundario);
 }
+
+
+/**boton fin**/
 
 .grid-main-dos-c {
     display: grid;
@@ -377,9 +387,10 @@ li {
         row-gap: var(--tamañofuente);
     }
     .imagen-main {
-        background-image: url(../img/header.jpg);
+        background-image: url(../img/reparacion-auto-compressed.jpg);
         height: auto;
         display: block;
+        border-radius: 3px;
     }
 }
 
@@ -388,7 +399,7 @@ li {
     height: .5rem;
     border-radius: 1rem;
     margin: auto;
-    background: rgba(217, 48, 48, 1);
+    background: var(--secundario);
 }
 
 .alinear-texto-c {
@@ -441,18 +452,21 @@ li {
 }
 
 .imagen-principio-1 {
-    background-image: url(../img/header.jpg);
+    background-image: url(../img/equpos-programacion-compressed.jpg);
     height: 20rem;
+    border-radius: 3px;
 }
 
 .imagen-principio-2 {
-    background-image: url(../img/header.jpg);
+    background-image: url(../img/computadora-auto-programacion-compressed.jpg);
     height: 20rem;
+    border-radius: 3px;
 }
 
 .imagen-principio-3 {
-    background-image: url(../img/header.jpg);
+    background-image: url(../img/reparacion-compressed.jpg);
     height: 20rem;
+    border-radius: 3px;
 }
 
 .no-padding {
@@ -509,6 +523,14 @@ li {
     opacity: .90;
 }
 
+.lista-diseño i {
+    transition: var(--transition);
+}
+
+.lista-diseño:hover i {
+    color: var(--primario);
+}
+
 .imagen-fondo-carro-herramientas {
     background-image: url(../img/carro-herramienta.jpg);
     height: 100%;
@@ -527,20 +549,13 @@ li {
 }
 
 .imagen-fondo-dos {
-    background-image: url(../img/header.jpg);
+    background-image: url(../img/carro-negro-inicio-mitad-compressed.jpg);
     height: auto;
-    background-attachment: fixed;
     margin: 2rem 0;
 }
 
-@media (min-width: 550px) {
-    .imagen-fondo-dos {
-        height: 50vh;
-    }
-}
-
 .color-fondo-oscuro-dos {
-    background-color: rgb(59 24 18 / 77%);
+    background-color: rgb(45 0 0 / 48%);
     height: 100%;
     display: flex;
     justify-content: center;
@@ -563,8 +578,9 @@ li {
 }
 
 .imagen-fondo-seccion {
-    background-image: url(../img/header.jpg);
+    background-image: url(../img/mustang-rojo-compressed.jpg);
     height: 50vh;
+    border-radius: 3px;
 }
 
 @media (min-width: 900px) {
@@ -575,7 +591,6 @@ li {
         row-gap: var(--tamañofuente);
     }
     .imagen-fondo-seccion {
-        background-image: url(../img/header.jpg);
         height: 100%;
     }
 }
@@ -598,8 +613,10 @@ li {
 /**NOSOTROS **/
 
 .imagen-fondo-nosotros {
-    background-image: url(../img/header.jpg);
+    background-image: url(../img/carro-blanco-nosotros-dos.jpg);
+    min-height: 200px;
     height: 50vh;
+    max-height: 50rem;
 }
 
 .fondo-negro-nosotros {
@@ -620,15 +637,14 @@ li {
     }
 }
 
-.seccion-nosotros h2,
-.seccion-nosotros p {
+.seccion-nosotros h2 {
     text-align: center;
 }
 
 @media (min-width: 600px) {
     .seccion-nosotros h2,
     .seccion-nosotros p {
-        margin: 1rem 5rem;
+        text-align: center;
     }
 }
 
@@ -639,7 +655,19 @@ li {
 .main-nosotros h4,
 .main-nosotros p {
     color: var(--primario);
-    margin: 1rem 0;
+    margin: 2rem 0;
+}
+
+.imagen-main-nosotros-uno {
+    background-image: url(../img/carro-blanco-reparacion-compressed.jpg);
+    height: 20rem;
+    border-radius: 3px;
+}
+
+.imagen-main-nosotros-dos {
+    background-image: url(../img/carro-reparacion-con-compu-compressed.jpg);
+    height: 20rem;
+    border-radius: 3px;
 }
 
 .fondo-rojo {
@@ -658,7 +686,8 @@ li {
 }
 
 .imagen-seccion-nosotros {
-    background-image: url(../img/header.jpg);
+    background-image: url(../img/laptop-programacion-compressed.jpg);
+    border-radius: 3px;
     height: 40vh;
     width: 100%;
 }
@@ -684,8 +713,10 @@ li {
 CONTACTO**/
 
 .imagen-fondo-contacto {
-    background-image: url(../img/header.jpg);
+    background-image: url(../img/seccion-contacto-compressed.jpg);
+    min-height: 200px;
     height: 50vh;
+    max-height: 50rem;
 }
 
 .imagen-fondo-contacto h1 {
@@ -727,7 +758,6 @@ CONTACTO**/
 
 .contacto-redes-sociales a:hover {
     color: var(--secundario);
-    box-shadow: 0 1px 5px 0px rgb(0 0 0 / 50%);
     border: 2px solid var(--primario);
 }
 
@@ -735,14 +765,15 @@ CONTACTO**/
     position: relative;
     left: 0;
     right: 0;
+    min-height: 200px;
     height: 50vh;
+    max-height: 50rem;
+    border: 3px solid var(--secundario);
 }
 
 .mapa iframe {
     width: 100%;
     height: 100%;
-    max-width: 1200px;
-    max-height: 800px;
 }
 
 .ubicacion i {
