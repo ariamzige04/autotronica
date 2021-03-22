@@ -262,7 +262,8 @@ li {
 /** HEADER**/
 
 .header-imagen {
-    background-image: url(../img/350z-compressed.jpg);
+    background-color: var(--negro-claro);
+    background-image: url(../img/350z-header.jpg);
     position: relative;
     min-height: 400px;
     height: 100vh;

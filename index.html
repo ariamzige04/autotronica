@@ -42,175 +42,310 @@
     </section>
     <!--IMAGEN DE FONDO FIN-->
 
-    <header class="header">
+    <div class="buttons">
+        <div class="buttons"> <button class="fill">Fill In</button> <button class="pulse">Pulse</button> <button class="close">Close</button> <button class="raise">Raise</button> <button class="up">Fill Up</button> <button class="slide">Slide</button> <button class="offset">Offset</button>            </div>
+        <style>
+            .fill:focus,
+            .fill:hover {
+                box-shadow: inset 0 0 0 2em var(--hover)
+            }
+            
+            .pulse:focus,
+            .pulse:hover {
+                -webkit-animation: pulse 1s;
+                animation: pulse 1s;
+                box-shadow: 0 0 0 2em rgba(255, 255, 255, 0)
+            }
+            
+            @-webkit-keyframes pulse {
+                0% {
+                    box-shadow: 0 0 var(--hover)
+                }
+            }
+            
+            @keyframes pulse {
+                0% {
+                    box-shadow: 0 0 var(--hover)
+                }
+            }
+            
+            .close:focus,
+            .close:hover {
+                box-shadow: inset -3.5em 0 0 0 var(--hover), inset 3.5em 0 0 0 var(--hover)
+            }
+            
+            .raise:focus,
+            .raise:hover {
+                box-shadow: 0 .5em .5em -.4em var(--hover);
+                -webkit-transform: translateY(-.25em);
+                transform: translateY(-.25em)
+            }
+            
+            .up:focus,
+            .up:hover {
+                box-shadow: inset 0 -3.25em 0 0 var(--hover)
+            }
+            
+            .slide:focus,
+            .slide:hover {
+                box-shadow: inset 6.5em 0 0 0 var(--hover)
+            }
+            
+            .offset {
+                box-shadow: .3em .3em 0 0 var(--color), inset .3em .3em 0 0 var(--color)
+            }
+            
+            .offset:focus,
+            .offset:hover {
+                box-shadow: 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover)
+            }
+            
+            .fill {
+                --color: #a972cb;
+                --hover: #cb72aa
+            }
+            
+            .pulse {
+                --color: #ef6eae;
+                --hover: #ef8f6e
+            }
+            
+            .close {
+                --color: #ff7f82;
+                --hover: #ffdc7f
+            }
+            
+            .raise {
+                --color: #ffa260;
+                --hover: #e5ff60
+            }
+            
+            .up {
+                --color: #e4cb58;
+                --hover: #94e458
+            }
+            
+            .slide {
+                --color: #8fc866;
+                --hover: #66c887
+            }
+            
+            .offset {
+                --color: #19bc8b;
+                --hover: #1973bc
+            }
+            
+            button {
+                color: var(--color);
+                transition: .25s
+            }
+            
+            button:focus,
+            button:hover {
+                border-color: var(--hover);
+                color: #fff
+            }
+            
+            body {
+                color: #fff;
+                background: #17181c;
+                font: 300 1em 'Fira Sans', sans-serif;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                text-align: center;
+                min-height: 100vh;
+                display: flex
+            }
+            
+            button {
+                background: 0 0;
+                border: 2px solid;
+                font: inherit;
+                line-height: 1;
+                margin: .5em;
+                padding: 1em 2em
+            }
+            
+            h1 {
+                font-weight: 400
+            }
+            
+            code {
+                color: #e4cb58;
+                font: inherit
+            }
+        </style>
 
-        <nav class=" nav-site">
-            <div class="logo">
-                <a href="#">
-                    <p>Autotronica</p>
-                </a>
+        <header class="header">
 
-            </div>
+            <nav class=" nav-site">
+                <div class="logo">
+                    <a href="#">
+                        <p>Autotronica</p>
+                    </a>
 
-            <div class="nav">
-                <div class="contenedor">
-                    <!--nav-->
-                    <a class=" nav-seleccionado" href="#">Inicio<i class="fas fa-house-user"></i></a>
-                    <a href="nosotros.html">Nosotros<i class="fas fa-car-alt"></i></a>
-                    <a class=" contacto-seleccion" href="contacto.html">Contacto<i class="far fa-envelope"></i></a>
-                    <!--nav-->
                 </div>
 
-            </div>
+                <div class="nav">
+                    <div class="contenedor">
+                        <!--nav-->
+                        <a class=" nav-seleccionado" href="#">Inicio<i class="fas fa-house-user"></i></a>
+                        <a href="nosotros.html">Nosotros<i class="fas fa-car-alt"></i></a>
+                        <a class=" contacto-seleccion" href="contacto.html">Contacto<i class="far fa-envelope"></i></a>
+                        <!--nav-->
+                    </div>
 
-            <div class="hamburguesa hamburguesa-margen" id="hamburguesa">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
-
-    </header>
-
-
-
-    <main data-aos="fade-up">
-        <div class="contenedor diseño-principal grid-main-dos-c ">
-            <div class=" imagen-main imagen-fondo "></div>
-            <div>
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing</h2>
-                <div class="centrar-contenido ">
-                    <div class="linea-principio "></div>
                 </div>
-                <p class="alinear-texto-c ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique quas, iure aperiam fugiat dolores perferendis. Facere corporis, doloribus commodi non aliquid quis repellat, aut, omnis quidem alias vel quas enim.</p>
-            </div>
 
-        </div>
-    </main>
+                <div class="hamburguesa hamburguesa-margen" id="hamburguesa">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+
+        </header>
 
 
-    <section data-aos="fade-up">
-        <div class="contenedor diseño-principal">
-            <h2>Lorem ipsum dolor, sit amet consectetur adipisicing el</h2>
 
-            <div class="tres-columnas ">
+        <main data-aos="fade-up">
+            <div class="contenedor diseño-principal grid-main-dos-c ">
+                <div class=" imagen-main imagen-fondo "></div>
                 <div>
-                    <div class="imagen-principio-1 imagen-fondo "></div>
-                    <p class="alinear-texto-c tres-columnas-p ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores incidunt optio fugiat sint accusamus fudw</p>
+                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing</h2>
+                    <div class="centrar-contenido ">
+                        <div class="linea-principio "></div>
+                    </div>
+                    <p class="alinear-texto-c ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique quas, iure aperiam fugiat dolores perferendis. Facere corporis, doloribus commodi non aliquid quis repellat, aut, omnis quidem alias vel quas enim.</p>
                 </div>
-
-                <div>
-                    <div class="imagen-principio-2 imagen-fondo "></div>
-                    <p class="alinear-texto-c tres-columnas-p ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores incidunt optio fugiat sint accusamus fudw</p>
-                </div>
-
-                <div>
-                    <div class="imagen-principio-3 imagen-fondo "></div>
-                    <p class="alinear-texto-c ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores incidunt optio fugiat sint accusamus fudw</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section data-aos="fade-up">
-        <div class="contenedor diseño-principal ">
-            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h2>
-
-            <div class="no-padding-ul ">
-
-                <div class="listas-grid alinear-texto-c no-padding-ul ">
-
-                    <div class="lista-diseño " data-aos="zoom-in">
-
-                        <div class="imagen-fondo-carro-herramientas ">
-                            <div class="height100 centar-con-flex ">
-                                <p><i class="fas fa-tools "></i>Lorem, ipsum: dolor sit amet consectetur adipisicing elit. Dolores consequatur optio aliquam, voluptates veritatis assumenda ipsum!</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="lista-diseño " data-aos="zoom-in">
-                        <div class="imagen-fondo-carro-herramientas ">
-                            <div class="height100 centar-con-flex ">
-                                <p><i class="fas fa-tools "></i>Lorem, ipsum: dolor sit amet consectetur adipisicing elit. Dolores consequatur optio aliquam, voluptates veritatis assumenda ipsum!</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="lista-diseño " data-aos="zoom-in">
-                        <div class="imagen-fondo-carro-herramientas ">
-                            <div class="height100 centar-con-flex ">
-                                <p><i class="fas fa-tools "></i>Lorem, ipsum: dolor sit amet consectetur adipisicing elit. Dolores consequatur optio aliquam, voluptates veritatis assumenda ipsum!</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="lista-diseño listas-none " data-aos="zoom-in">
-                        <div class="imagen-fondo-carro-herramientas ">
-                            <div class="height100 centar-con-flex ">
-                                <p><i class="fas fa-tools "></i>Lorem, ipsum: dolor sit amet consectetur adipisicing elit. Dolores consequatur optio aliquam, voluptates veritatis assumenda ipsum!</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="lista-diseño listas-none " data-aos="zoom-in">
-                        <div class="imagen-fondo-carro-herramientas ">
-                            <div class="height100 centar-con-flex ">
-                                <p><i class="fas fa-tools "></i>Lorem, ipsum: dolor sit amet consectetur adipisicing elit. Dolores consequatur optio aliquam, voluptates veritatis assumenda ipsum!</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="lista-diseño listas-none " data-aos="zoom-in">
-                        <div class="imagen-fondo-carro-herramientas ">
-                            <div class="height100 centar-con-flex ">
-                                <p><i class="fas fa-tools "></i>Lorem, ipsum: dolor sit amet consectetur adipisicing elit. Dolores consequatur optio aliquam, voluptates veritatis assumenda ipsum!</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
 
             </div>
-        </div>
-    </section>
+        </main>
 
-    <section data-aos="fade-up">
-        <div class="imagen-fondo-dos imagen-fondo ">
-            <div class="color-fondo-oscuro-dos ">
-                <div class=" contenedor contenido-img-dos ">
-                    <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident sit, nostrum beatae quod soluta rerum a magnam itaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis obcaecati harum cum. Consectetur deserunt
-                        magnam temporibus.</p>
-                    <a class="boton boton-flex" href="# ">Lorem ipsum<i class="fas fa-arrow-right"></i></a>
+
+        <section data-aos="fade-up">
+            <div class="contenedor diseño-principal">
+                <h2>Lorem ipsum dolor, sit amet consectetur adipisicing el</h2>
+
+                <div class="tres-columnas ">
+                    <div>
+                        <div class="imagen-principio-1 imagen-fondo "></div>
+                        <p class="alinear-texto-c tres-columnas-p ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores incidunt optio fugiat sint accusamus fudw</p>
+                    </div>
+
+                    <div>
+                        <div class="imagen-principio-2 imagen-fondo "></div>
+                        <p class="alinear-texto-c tres-columnas-p ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores incidunt optio fugiat sint accusamus fudw</p>
+                    </div>
+
+                    <div>
+                        <div class="imagen-principio-3 imagen-fondo "></div>
+                        <p class="alinear-texto-c ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores incidunt optio fugiat sint accusamus fudw</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section data-aos="fade-up">
-        <div class="contenedor diseño-principal ">
-            <div class=" grid-dos-columnas ">
-                <div>
-                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus temporibus sequi repellat facilis, aspernatur laboriosam at beatae sint eaque nulla necessitatibus expedita ratione ?</p>
-                    <p>Lorem ipsum dolor sit amet illum, impedit maxime alias atque? Totam, iste qui?</p>
-                </div>
+        <section data-aos="fade-up">
+            <div class="contenedor diseño-principal ">
+                <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h2>
 
-                <div>
-                    <div class="imagen-fondo-seccion imagen-fondo "></div>
+                <div class="no-padding-ul ">
+
+                    <div class="listas-grid alinear-texto-c no-padding-ul ">
+
+                        <div class="lista-diseño " data-aos="zoom-in">
+
+                            <div class="imagen-fondo-carro-herramientas ">
+                                <div class="height100 centar-con-flex ">
+                                    <p><i class="fas fa-tools "></i>Lorem, ipsum: dolor sit amet consectetur adipisicing elit. Dolores consequatur optio aliquam, voluptates veritatis assumenda ipsum!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lista-diseño " data-aos="zoom-in">
+                            <div class="imagen-fondo-carro-herramientas ">
+                                <div class="height100 centar-con-flex ">
+                                    <p><i class="fas fa-tools "></i>Lorem, ipsum: dolor sit amet consectetur adipisicing elit. Dolores consequatur optio aliquam, voluptates veritatis assumenda ipsum!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lista-diseño " data-aos="zoom-in">
+                            <div class="imagen-fondo-carro-herramientas ">
+                                <div class="height100 centar-con-flex ">
+                                    <p><i class="fas fa-tools "></i>Lorem, ipsum: dolor sit amet consectetur adipisicing elit. Dolores consequatur optio aliquam, voluptates veritatis assumenda ipsum!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lista-diseño listas-none " data-aos="zoom-in">
+                            <div class="imagen-fondo-carro-herramientas ">
+                                <div class="height100 centar-con-flex ">
+                                    <p><i class="fas fa-tools "></i>Lorem, ipsum: dolor sit amet consectetur adipisicing elit. Dolores consequatur optio aliquam, voluptates veritatis assumenda ipsum!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lista-diseño listas-none " data-aos="zoom-in">
+                            <div class="imagen-fondo-carro-herramientas ">
+                                <div class="height100 centar-con-flex ">
+                                    <p><i class="fas fa-tools "></i>Lorem, ipsum: dolor sit amet consectetur adipisicing elit. Dolores consequatur optio aliquam, voluptates veritatis assumenda ipsum!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lista-diseño listas-none " data-aos="zoom-in">
+                            <div class="imagen-fondo-carro-herramientas ">
+                                <div class="height100 centar-con-flex ">
+                                    <p><i class="fas fa-tools "></i>Lorem, ipsum: dolor sit amet consectetur adipisicing elit. Dolores consequatur optio aliquam, voluptates veritatis assumenda ipsum!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer class="footer">
-        <p>Autotronica</p>
-    </footer>
+        <section data-aos="fade-up">
+            <div class="imagen-fondo-dos imagen-fondo ">
+                <div class="color-fondo-oscuro-dos ">
+                    <div class=" contenedor contenido-img-dos ">
+                        <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident sit, nostrum beatae quod soluta rerum a magnam itaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis obcaecati harum cum. Consectetur deserunt
+                            magnam temporibus.</p>
+                        <a class="boton boton-flex" href="# ">Lorem ipsum<i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section data-aos="fade-up">
+            <div class="contenedor diseño-principal ">
+                <div class=" grid-dos-columnas ">
+                    <div>
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus temporibus sequi repellat facilis, aspernatur laboriosam at beatae sint eaque nulla necessitatibus expedita ratione ?</p>
+                        <p>Lorem ipsum dolor sit amet illum, impedit maxime alias atque? Totam, iste qui?</p>
+                    </div>
+
+                    <div>
+                        <div class="imagen-fondo-seccion imagen-fondo "></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>Autotronica</p>
+        </footer>
 
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/main.js"></script>
-    <script src="https://kit.fontawesome.com/c15b744a04.js " crossorigin="anonymous "></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="js/main.js"></script>
+        <script src="https://kit.fontawesome.com/c15b744a04.js " crossorigin="anonymous "></script>
 </body>
 
 
