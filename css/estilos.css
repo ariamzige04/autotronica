@@ -268,8 +268,12 @@ li {
     background-image: url(../img/350z-header.jpg);
     position: relative;
     min-height: 400px;
-    height: 100vh;
+    /* height: 100vh; */
+    width: 100%;
+    top: 0;
+    bottom: 0;
     max-height: 825px;
+    background-attachment: fixed;
 }
 
 @media (min-width: 900px) {
