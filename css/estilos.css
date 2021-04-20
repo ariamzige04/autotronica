@@ -264,6 +264,7 @@ li {
 /** HEADER**/
 
 .header-imagen {
+    transition: 30s all;
     background-color: var(--negro-claro);
     background-image: url(../img/350z-header.jpg);
     position: relative;
