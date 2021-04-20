@@ -151,11 +151,11 @@ li {
     position: absolute;
     top: 100%;
     left: 0;
-    background: var(--secundario);
+    background: var(--negro-claro);
     color: var(--blanco);
     text-align: center;
     transform: translateX(-100%);
-    opacity: .95;
+    opacity: .97;
 }
 
 .nav i {
@@ -177,9 +177,9 @@ li {
 }
 
 .nav a:hover {
-    background-color: var(--negro-claro);
+    background-color: var(--secundario);
     transition: var(--transition);
-    border: 2px solid var(--negro);
+    border: 2px solid var(--blanco);
 }
 
 .nav-seleccionado {
@@ -818,10 +818,10 @@ CONTACTO**/
 
 .linea-flecha {
     position: absolute;
-    top: 28%;
+    top: 30%;
     left: calc(50% - 3px);
     border: 3px dashed var(--blanco);
-    height: 20%;
+    height: 15%;
     z-index: 0;
     opacity: .8;
 }
@@ -845,7 +845,7 @@ CONTACTO**/
         transform: translate(0, 0%);
     }
     100% {
-        transform: translate(0, 10rem);
+        transform: translate(0, 200%);
     }
 }
 
