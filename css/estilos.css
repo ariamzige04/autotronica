@@ -3,7 +3,7 @@ html {
     font-size: 62.5%;
     text-decoration: none;
     /** Reset para REMS - 62.5% = 10px de 16px **/
-    background-color: #e9e9e9;
+    background-color: var(--color-html);
     scroll-behavior: smooth;
 }
 
@@ -17,6 +17,7 @@ html {
     --negro-claro: #2e2e2e;
     --tamañofuente: 2rem;
     --transition: .5s all!important;
+    --color-html: #e9e9e9;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap');
@@ -195,16 +196,32 @@ li {
     line-height: 0;
     font-size: 3rem;
     padding: 1rem;
-    border-radius: 1rem;
+    border-radius: 3px;
     color: var(--blanco);
     transition: var(--transition);
     border: 2px solid var(--blanco);
+    animation: nav 1.5s linear infinite;
+}
+
+@keyframes nav {
+    0% {
+        transform: scale(.9);
+    }
+    100% {
+        transform: scale(1);
+        border-color: var(--primario);
+    }
+}
+
+.hamburguesa-margen i {
+    position: relative;
+    top: -2px;
 }
 
 .hamburguesa-margen:hover {
-    background-color: var(--blanco);
+    background-color: var(--primario);
     color: var(--secundario);
-    border: 2px solid var(--secundario);
+    border-color: var(--secundario);
 }
 
 @media (min-width: 600px) {
@@ -264,17 +281,12 @@ li {
 /** HEADER**/
 
 .header-imagen {
-    transition: 30s all;
     background-color: var(--negro-claro);
     background-image: url(../img/350z-header.jpg);
     position: relative;
     min-height: 400px;
-    /* height: 100vh; */
-    width: 100%;
-    top: 0;
-    bottom: 0;
+    height: 100vh;
     max-height: 825px;
-    background-attachment: fixed;
 }
 
 @media (min-width: 900px) {
@@ -502,12 +514,6 @@ li {
     height: 100%;
 }
 
-@media (min-width: 768px) {
-    .lista-diseño {
-        height: 25rem;
-    }
-}
-
 .lista-diseño {
     background-color: var(--blanco);
     padding: 1rem;
@@ -515,6 +521,16 @@ li {
     border: 2px solid var(--secundario);
     transition: var(--transition);
     border-radius: 3px;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 15rem;
+}
+
+@media (min-width: 768px) {
+    .lista-diseño {
+        height: 25rem;
+    }
 }
 
 .lista-diseño:hover {
@@ -526,7 +542,9 @@ li {
 }
 
 .lista-diseño:hover i {
+    opacity: .95;
     color: var(--primario);
+    text-shadow: 0px 0 5px var(--primario);
 }
 
 .imagen-fondo-carro-herramientas {
@@ -538,9 +556,12 @@ li {
 }
 
 .lista-diseño i {
+    text-shadow: 0px 0 5px #b85151;
+    position: absolute;
+    top: -2rem;
+    left: -2rem;
     color: var(--secundario);
-    opacity: .8;
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     width: 4rem;
     height: 4rem;
     margin-right: 1rem;
@@ -565,7 +586,6 @@ li {
 .imagen-fondo-dos p {
     color: var(--blanco);
     width: 100%;
-    text-align: center;
 }
 
 .contenido-img-dos a {
@@ -646,12 +666,12 @@ li {
     }
 }
 
-.seccion-nosotros p {
-    text-align-last: center;
-}
-
 .no-margin {
     margin: 0!important;
+}
+
+.main-nosotros h4 {
+    font-size: 2.3rem;
 }
 
 .main-nosotros h4,
@@ -793,15 +813,15 @@ CONTACTO**/
 
 .titulo-rows {
     position: relative;
-    top: 50%;
+    top: 30%;
 }
 
 .linea-flecha {
     position: absolute;
-    top: 30%;
+    top: 28%;
     left: calc(50% - 3px);
     border: 3px dashed var(--blanco);
-    height: 18%;
+    height: 20%;
     z-index: 0;
     opacity: .8;
 }
@@ -825,11 +845,13 @@ CONTACTO**/
         transform: translate(0, 0%);
     }
     100% {
-        transform: translate(0, 120%);
+        transform: translate(0, 10rem);
     }
 }
 
 .flecha-animacion i {
+    position: absolute;
+    top: 0;
     animation: flecha 1s linear infinite;
     font-size: 5rem;
     text-align: center;
