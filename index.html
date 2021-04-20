@@ -8,22 +8,152 @@
     <title>Autotronica-Computadoras Automotrices</title>
     <meta name="description" content="">
 
-    <link rel="preload" href="css/normalize.css" as="style">
+
     <link rel="stylesheet" href="css/normalize.css">
 
-    <link rel="preload" href="css/estilos.css" as="style">
+
     <link rel="stylesheet" href="css/estilos.css">
 
     <link rel="shortcut icon" href="img/" type="image/x-icon">
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
+    <!--LOADER-->
+    <style>
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: 1s all;
+            opacity: 0;
+        }
+        
+        .loading.show {
+            opacity: 1;
+        }
+        
+        .lds-ring {
+            display: inline-block;
+            position: relative;
+            width: 11rem;
+            height: 11rem;
+        }
+        
+        .lds-ring div {
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            width: 8rem;
+            height: 8rem;
+            margin: 8px;
+            border: 8px solid #db0b0b;
+            border-radius: 50%;
+            animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+            border-color: #db0b0b transparent transparent transparent;
+        }
+        
+        .lds-ring div:nth-child(1) {
+            animation-delay: -0.45s;
+        }
+        
+        .lds-ring div:nth-child(2) {
+            animation-delay: -0.3s;
+        }
+        
+        .lds-ring div:nth-child(3) {
+            animation-delay: -0.15s;
+        }
+        
+        @keyframes lds-ring {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+    <!-- Loading HTML -->
+    <div class="loading show">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- Loading Javascript -->
+    <script>
+        // Loading
+        var Loading = (loadingDelayHidden = 0) => {
+            let loading = null;
+            const myLoadingDelayHidden = loadingDelayHidden;
+            let imgs = [];
+            let lenImgs = 0;
+            let counterImgsLoading = 0;
+
+            function incrementCounterImgs() {
+                counterImgsLoading += 1;
+                if (counterImgsLoading === lenImgs) {
+                    hideLoading()
+                }
+            }
+
+            function hideLoading() {
+                if (loading !== null) {
+                    loading.classList.remove('show');
+                    setTimeout(function() {
+                        loading.remove()
+                    }, myLoadingDelayHidden)
+                }
+            }
+
+            function init() {
+                document.addEventListener('DOMContentLoaded', function() {
+                    loading = document.querySelector('.loading');
+                    imgs = Array.from(document.images);
+                    lenImgs = imgs.length;
+                    if (imgs.length === 0) {
+                        hideLoading()
+                    } else {
+                        imgs.forEach(function(img) {
+                            img.addEventListener('load', incrementCounterImgs, false)
+                        })
+                    }
+                })
+            }
+            return {
+                'init': init
+            }
+        }
+
+        Loading(1000).init();
+    </script>
+
+    <!--FIN LOADER-->
+    <!--FIN LOADER-->
+    <!--FIN LOADER-->
+    <!--FIN LOADER-->
+    <!--FIN LOADER-->
+    <!--FIN LOADER-->
+    <!--FIN LOADER-->
+    <!--FIN LOADER-->
+    <!--FIN LOADER-->
+
     <!--IMAGEN DE FONDO PRINCIPIO-->
     <section class="header-imagen imagen-fondo ">
 
-        <div class=" color-fondo-oscuro">
+        <div class=" color-fondo-oscuro ">
             <div class="contenedor header-centar-padre">
                 <div class="hader-dos-columnas">
                     <div>
@@ -70,24 +200,24 @@
 
     </header>
 
-    <main data-aos="fade-up">
-        <div class="contenedor diseño-principal grid-main-dos-c ">
+    <main>
+        <div class="contenedor diseño-principal grid-main-dos-c padd-bott">
             <div class=" imagen-main imagen-fondo "></div>
             <div>
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing</h2>
+                <h2>Lorem ipsum </h2>
                 <div class="centrar-contenido ">
-                    <div class="linea-principio "></div>
+
                 </div>
-                <p class="alinear-texto-c ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique quas, iure aperiam fugiat dolores perferendis. Facere corporis, doloribus commodi non aliquid quis repellat, aut, omnis quidem alias vel quas enim.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique quas, iure aperiam fugiat dolores perferendis. Facere corporis, doloribus commodi non aliquid quis repellat, aut, omnis quidem alias vel quas enim.</p>
             </div>
 
         </div>
     </main>
 
 
-    <section data-aos="fade-up">
+    <section>
         <div class="contenedor diseño-principal">
-            <h2>Lorem ipsum dolor, sit amet consectetur adipisicing el</h2>
+            <h2>Lorem ipsum </h2>
 
             <div class="tres-columnas ">
                 <div>
@@ -108,15 +238,15 @@
         </div>
     </section>
 
-    <section data-aos="fade-up">
-        <div class="contenedor diseño-principal ">
-            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h2>
+    <section>
+        <div class="contenedor diseño-principal padd-bott ">
+            <h2>Lorem ipsum </h2>
 
             <div class="no-padding-ul ">
 
                 <div class="listas-grid alinear-texto-c no-padding-ul ">
 
-                    <div class="lista-diseño " data-aos="zoom-in">
+                    <div class="lista-diseño ">
 
                         <div class="imagen-fondo-carro-herramientas ">
                             <div class="height100 centar-con-flex ">
@@ -125,7 +255,7 @@
                         </div>
                     </div>
 
-                    <div class="lista-diseño " data-aos="zoom-in">
+                    <div class="lista-diseño ">
                         <div class="imagen-fondo-carro-herramientas ">
                             <div class="height100 centar-con-flex ">
                                 <p><i class="fas fa-tools "></i>Lorem, ipsum: dolor sit amet consectetur adipisicing elit. Dolores consequatur optio aliquam, voluptates veritatis assumenda ipsum!</p>
@@ -133,7 +263,7 @@
                         </div>
                     </div>
 
-                    <div class="lista-diseño " data-aos="zoom-in">
+                    <div class="lista-diseño ">
                         <div class="imagen-fondo-carro-herramientas ">
                             <div class="height100 centar-con-flex ">
                                 <p><i class="fas fa-tools "></i>Lorem, ipsum: dolor sit amet consectetur adipisicing elit. Dolores consequatur optio aliquam, voluptates veritatis assumenda ipsum!</p>
@@ -141,7 +271,7 @@
                         </div>
                     </div>
 
-                    <div class="lista-diseño listas-none " data-aos="zoom-in">
+                    <div class="lista-diseño listas-none ">
                         <div class="imagen-fondo-carro-herramientas ">
                             <div class="height100 centar-con-flex ">
                                 <p><i class="fas fa-tools "></i>Lorem, ipsum: dolor sit amet consectetur adipisicing elit. Dolores consequatur optio aliquam, voluptates veritatis assumenda ipsum!</p>
@@ -149,7 +279,7 @@
                         </div>
                     </div>
 
-                    <div class="lista-diseño listas-none " data-aos="zoom-in">
+                    <div class="lista-diseño listas-none ">
                         <div class="imagen-fondo-carro-herramientas ">
                             <div class="height100 centar-con-flex ">
                                 <p><i class="fas fa-tools "></i>Lorem, ipsum: dolor sit amet consectetur adipisicing elit. Dolores consequatur optio aliquam, voluptates veritatis assumenda ipsum!</p>
@@ -157,7 +287,7 @@
                         </div>
                     </div>
 
-                    <div class="lista-diseño listas-none " data-aos="zoom-in">
+                    <div class="lista-diseño listas-none ">
                         <div class="imagen-fondo-carro-herramientas ">
                             <div class="height100 centar-con-flex ">
                                 <p><i class="fas fa-tools "></i>Lorem, ipsum: dolor sit amet consectetur adipisicing elit. Dolores consequatur optio aliquam, voluptates veritatis assumenda ipsum!</p>
@@ -172,11 +302,11 @@
         </div>
     </section>
 
-    <section data-aos="fade-up">
+    <section>
         <div class="imagen-fondo-dos imagen-fondo ">
             <div class="color-fondo-oscuro-dos ">
                 <div class=" contenedor contenido-img-dos ">
-                    <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </h3>
+                    <h3>Lorem ipsum </h3>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident sit, nostrum beatae quod soluta rerum a magnam itaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis obcaecati harum cum. Consectetur deserunt
                         magnam temporibus.</p>
                     <a class="boton boton-flex" href="# ">Lorem ipsum<i class="fas fa-arrow-right"></i></a>
@@ -185,11 +315,11 @@
         </div>
     </section>
 
-    <section data-aos="fade-up">
-        <div class="contenedor diseño-principal ">
+    <section>
+        <div class="contenedor diseño-principal padd-bott marg-top">
             <div class=" grid-dos-columnas ">
                 <div>
-                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                    <h2>Lorem ipsum </h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus temporibus sequi repellat facilis, aspernatur laboriosam at beatae sint eaque nulla necessitatibus expedita ratione ?</p>
                     <p>Lorem ipsum dolor sit amet illum, impedit maxime alias atque? Totam, iste qui?</p>
                 </div>
@@ -202,11 +332,13 @@
     </section>
 
     <footer class="footer">
-        <p>Autotronica</p>
+        <a href="#">
+            <p>Autotronica</p>
+        </a>
+
     </footer>
 
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
     <script src="https://kit.fontawesome.com/c15b744a04.js " crossorigin="anonymous "></script>
 </body>

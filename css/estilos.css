@@ -4,6 +4,7 @@ html {
     text-decoration: none;
     /** Reset para REMS - 62.5% = 10px de 16px **/
     background-color: #e9e9e9;
+    scroll-behavior: smooth;
 }
 
  :root {
@@ -57,6 +58,7 @@ h4 {
     color: var(--secundario);
     text-align: center;
     font-weight: 700;
+    margin: 1.5rem 0;
 }
 
 h1 {
@@ -333,24 +335,22 @@ li {
 
 .boton {
     display: inline-block;
-    padding: 1.5rem 2rem;
+    padding: 1.6rem 3rem;
     margin: 2rem 0;
-    border: .5rem solid var(--secundario);
-    background-color: rgb(0 0 0 / 30%);
+    background-color: var(--secundario);
     color: var(--blanco);
     text-transform: uppercase;
-    border-radius: 2px;
+    border-radius: 3px;
     text-align: center;
     font-weight: bold;
     transition: var(--transition);
-    box-shadow: 0px 1px 10px 0px rgb(255 0 0 / 76%);
+    box-shadow: 0 1px 10px 0px rgb(0 0 0 / 72%);
 }
 
 .boton:hover {
-    border: .5rem solid var(--blanco);
-    color: var(--blanco);
-    opacity: .95;
-    box-shadow: 0px 1px 10px 0px rgb(255 255 255 / 59%);
+    background-color: var(--blanco);
+    color: var(--primario);
+    transform: scale(1.03);
 }
 
 .boton i {
@@ -364,7 +364,7 @@ li {
 }
 
 .boton:hover i {
-    color: var(--secundario);
+    color: var(--primario);
 }
 
 
@@ -394,28 +394,22 @@ li {
     }
 }
 
-.linea-principio {
-    width: 50%;
-    height: .5rem;
-    border-radius: 1rem;
-    margin: auto;
-    background: var(--secundario);
-}
-
 .alinear-texto-c {
     text-align: center;
 }
 
 .diseño-principal {
     background-color: var(--blanco);
-    padding: var(--tamañofuente);
-    margin-top: 2rem;
-    border-radius: .5rem;
-    transition: var(--transition);
+    padding: 2rem 2rem 0;
+    margin-bottom: -2rem;
 }
 
-.diseño-principal:hover {
-    box-shadow: 0px 4px 8px 2px rgb(206 206 206 / 69%);
+.padd-bott {
+    padding-bottom: 2rem!important;
+}
+
+.marg-top {
+    margin-top: -2rem;
 }
 
 .centrar-contenido {
@@ -520,7 +514,6 @@ li {
 
 .lista-diseño:hover {
     border: 2px solid var(--primario);
-    opacity: .90;
 }
 
 .lista-diseño i {
@@ -596,7 +589,7 @@ li {
 }
 
 .footer {
-    height: 10rem;
+    height: 7rem;
     background-color: var(--primario);
     display: flex;
     justify-content: center;
@@ -627,6 +620,7 @@ li {
 }
 
 .imagen-fondo-nosotros h1 {
+    font-size: 5rem;
     color: var(--blanco);
     margin: 0;
 }
@@ -642,10 +636,13 @@ li {
 }
 
 @media (min-width: 600px) {
-    .seccion-nosotros h2,
-    .seccion-nosotros p {
+    .seccion-nosotros h2 {
         text-align: center;
     }
+}
+
+.seccion-nosotros p {
+    text-align-last: center;
 }
 
 .no-margin {
@@ -720,6 +717,7 @@ CONTACTO**/
 }
 
 .imagen-fondo-contacto h1 {
+    font-size: 5rem;
     color: var(--blanco);
 }
 
@@ -761,6 +759,12 @@ CONTACTO**/
     border: 2px solid var(--primario);
 }
 
+.rows-dos {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    position: relative;
+}
+
 .mapa {
     position: relative;
     left: 0;
@@ -769,6 +773,7 @@ CONTACTO**/
     height: 50vh;
     max-height: 50rem;
     border: 3px solid var(--secundario);
+    pointer-events: none;
 }
 
 .mapa iframe {
@@ -779,4 +784,50 @@ CONTACTO**/
 .ubicacion i {
     text-align: center;
     padding-left: 1rem;
+}
+
+.titulo-rows {
+    position: relative;
+    top: 50%;
+}
+
+.linea-flecha {
+    position: absolute;
+    top: 30%;
+    left: calc(50% - 3px);
+    border: 3px dashed var(--blanco);
+    height: 18%;
+    z-index: 0;
+    opacity: .8;
+}
+
+.btn-ubicacion {
+    display: table;
+    margin: auto;
+}
+
+.flecha-animacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    position: relative;
+    z-index: 10;
+}
+
+@keyframes flecha {
+    0% {
+        transform: translate(0, 0%);
+    }
+    100% {
+        transform: translate(0, 120%);
+    }
+}
+
+.flecha-animacion i {
+    animation: flecha 1s linear infinite;
+    font-size: 5rem;
+    text-align: center;
+    color: var(--secundario);
+    text-shadow: 0px 0 10px #666666;
 }
