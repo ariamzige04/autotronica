@@ -204,11 +204,9 @@ li {
 }
 
 @keyframes nav {
-    0% {
-        transform: scale(.9);
-    }
-    100% {
-        transform: scale(1);
+    0%,
+    100% {}
+    50% {
         border-color: var(--primario);
     }
 }
@@ -325,15 +323,16 @@ li {
     margin: auto;
 }
 
+.hader-dos-columnas h1 {
+    text-align: left;
+}
+
 @media (min-width: 845px) {
     .hader-dos-columnas {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         column-gap: var(--tamañofuente);
         row-gap: var(--tamañofuente);
-    }
-    .hader-dos-columnas h1 {
-        text-align: left;
     }
     .hader-dos-columnas p {
         text-align: center;

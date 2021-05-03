@@ -6,5 +6,3 @@ hamburguesa.addEventListener("click", () => {
 
     hamburguesa.classList.toggle("hamburguesaAnimacion");
 });
-
-AOS.init();
