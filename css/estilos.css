@@ -59,7 +59,7 @@ h4 {
     color: var(--secundario);
     text-align: center;
     font-weight: 700;
-    margin: 1.5rem 0;
+    margin: 0 0 1.5rem;
 }
 
 h1 {
@@ -279,7 +279,7 @@ li {
 /** HEADER**/
 
 .header-imagen {
-    background-color: var(--negro-claro);
+    background-color: var(--primario);
     background-image: url(../img/350z-header.jpg);
     position: relative;
     min-height: 400px;
@@ -325,6 +325,8 @@ li {
 
 .hader-dos-columnas h1 {
     text-align: left;
+    position: relative;
+    z-index: 100;
 }
 
 @media (min-width: 845px) {
@@ -337,6 +339,17 @@ li {
     .hader-dos-columnas p {
         text-align: center;
     }
+}
+
+.svg-carro {
+    position: absolute;
+    top: var(--tamañofuente);
+    right: var(--tamañofuente);
+    z-index: 90;
+    width: 20%;
+    pointer-events: none;
+    fill: var(--secundario);
+    opacity: .2;
 }
 
 
@@ -410,23 +423,47 @@ li {
     }
 }
 
+.margin-0 {
+    margin: 0;
+}
+
 .alinear-texto-c {
     text-align: center;
 }
 
 .diseño-principal {
     background-color: var(--blanco);
-    padding: 2rem 2rem 0;
-    margin-bottom: -2rem;
+    /** padding: 2rem 2rem 0;
+    margin-bottom: -2rem;**/
 }
 
-.padd-bott {
+.contenedor-2 {
+    width: 93%;
+    max-width: 90rem;
+    /** = 1200px; **/
+    margin: 0 auto;
+}
+
+.padding-top {
+    padding-top: var(--tamañofuente);
+}
+
+.margin-top-2rem {
+    margin-top: -2rem;
+}
+
+.padding-bottom {
+    padding-bottom: var(--tamañofuente);
+}
+
+
+/**.padd-bott {
     padding-bottom: 2rem!important;
 }
 
 .marg-top {
     margin-top: -2rem;
-}
+}**/
 
 .centrar-contenido {
     display: flex;
@@ -526,6 +563,12 @@ li {
     height: 15rem;
 }
 
+@media (max-width: 767px) {
+    .lista-diseño {
+        margin: var(--tamañofuente) 1rem;
+    }
+}
+
 @media (min-width: 768px) {
     .lista-diseño {
         height: 25rem;
@@ -543,7 +586,7 @@ li {
 .lista-diseño:hover i {
     opacity: .95;
     color: var(--primario);
-    text-shadow: 0px 0 5px var(--primario);
+    text-shadow: 0px 0 2px var(--primario);
 }
 
 .imagen-fondo-carro-herramientas {
@@ -555,12 +598,12 @@ li {
 }
 
 .lista-diseño i {
-    text-shadow: 0px 0 5px #b85151;
+    text-shadow: 0px 0 2px var(--secundario);
     position: absolute;
     top: -2rem;
     left: -2rem;
     color: var(--secundario);
-    font-size: 4.5rem;
+    font-size: 3.8rem;
     width: 4rem;
     height: 4rem;
     margin-right: 1rem;
@@ -578,7 +621,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 2rem 1rem 0;
 }
 
 .imagen-fondo-dos h3,
@@ -618,12 +661,16 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: var(--tamañofuente);
-    box-shadow: 0px -4px 5px 0px rgb(0 0 0 / 66%);
+    box-shadow: 0px -3px 4px 0px rgb(0 0 0 / 51%);
 }
 
 .footer p {
     color: var(--blanco);
+    transition: var(--transition);
+}
+
+.footer p:hover {
+    color: var(--secundario);
 }
 
 
@@ -694,7 +741,6 @@ li {
 .fondo-rojo {
     background-color: var(--secundario);
     padding: var(--tamañofuente);
-    margin-top: var(--tamañofuente);
 }
 
 .fondo-rojo h2,
@@ -794,10 +840,9 @@ CONTACTO**/
     left: 0;
     right: 0;
     min-height: 200px;
-    height: 50vh;
+    height: calc(50vh - 0rem);
     max-height: 50rem;
     border: 3px solid var(--secundario);
-    pointer-events: none;
 }
 
 .mapa iframe {

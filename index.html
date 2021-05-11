@@ -82,6 +82,8 @@
         }
     </style>
 
+
+
     <!-- Loading HTML -->
     <div class="loading show">
         <div class="lds-ring">
@@ -92,62 +94,15 @@
     </div>
 
 
-    <!-- Loading Javascript -->
-    <script>
-        // Loading
-        var Loading = (loadingDelayHidden = 0) => {
-            let loading = null;
-            const myLoadingDelayHidden = loadingDelayHidden;
-            let imgs = [];
-            let lenImgs = 0;
-            let counterImgsLoading = 0;
+    <!-- loader -->
 
-            function incrementCounterImgs() {
-                counterImgsLoading += 1;
-                if (counterImgsLoading === lenImgs) {
-                    hideLoading()
-                }
-            }
-
-            function hideLoading() {
-                if (loading !== null) {
-                    loading.classList.remove('show');
-                    setTimeout(function() {
-                        loading.remove()
-                    }, myLoadingDelayHidden)
-                }
-            }
-
-            function init() {
-                document.addEventListener('DOMContentLoaded', function() {
-                    loading = document.querySelector('.loading');
-                    imgs = Array.from(document.images);
-                    lenImgs = imgs.length;
-                    if (imgs.length === 0) {
-                        hideLoading()
-                    } else {
-                        imgs.forEach(function(img) {
-                            img.addEventListener('load', incrementCounterImgs, false)
-                        })
-                    }
-                })
-            }
-            return {
-                'init': init
-            }
-        }
-
-        Loading(1000).init();
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(window).load(function() {
+            $(".loading").fadeOut("slow");
+        });
     </script>
 
-    <!--FIN LOADER-->
-    <!--FIN LOADER-->
-    <!--FIN LOADER-->
-    <!--FIN LOADER-->
-    <!--FIN LOADER-->
-    <!--FIN LOADER-->
-    <!--FIN LOADER-->
-    <!--FIN LOADER-->
     <!--FIN LOADER-->
 
     <!--IMAGEN DE FONDO PRINCIPIO-->
@@ -168,7 +123,9 @@
                 </div>
             </div>
         </div>
-
+        <div class="">
+            <img class="svg-carro" src="./img/car-solid (1).svg" alt="carro">
+        </div>
     </section>
     <!--IMAGEN DE FONDO FIN-->
 
@@ -201,113 +158,120 @@
     </header>
 
     <main>
-        <div class="contenedor diseño-principal grid-main-dos-c padd-bott">
-            <div class=" imagen-main imagen-fondo "></div>
-            <div>
-                <h2>Lorem ipsum </h2>
-                <div class="centrar-contenido ">
+        <div class="contenedor diseño-principal  padding-top">
+            <di v class="padding-top">
+                <div class="contenedor-2 grid-main-dos-c">
+                    <div class=" imagen-main imagen-fondo "></div>
+                    <div>
+                        <h2>Lorem ipsum </h2>
+                        <div class="centrar-contenido ">
 
+                        </div>
+                        <p class="margin-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique quas, iure aperiam fugiat dolores perferendis. Facere corporis, doloribus commodi non aliquid quis repellat, aut, omnis quidem alias vel quas enim.</p>
+                    </div>
                 </div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique quas, iure aperiam fugiat dolores perferendis. Facere corporis, doloribus commodi non aliquid quis repellat, aut, omnis quidem alias vel quas enim.</p>
-            </div>
-
+        </div>
         </div>
     </main>
 
 
     <section>
-        <div class="contenedor diseño-principal">
-            <h2>Lorem ipsum </h2>
+        <div class="contenedor diseño-principal padding-top ">
+            <div class="contenedor-2">
+                <h2>Lorem ipsum </h2>
 
-            <div class="tres-columnas ">
-                <div>
-                    <div class="imagen-principio-1 imagen-fondo "></div>
-                    <p class="alinear-texto-c tres-columnas-p ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores incidunt optio fugiat sint accusamus fudw</p>
-                </div>
+                <div class="tres-columnas ">
+                    <div>
+                        <div class="imagen-principio-1 imagen-fondo "></div>
+                        <p class="alinear-texto-c tres-columnas-p ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores incidunt optio fugiat sint accusamus fudw</p>
+                    </div>
 
-                <div>
-                    <div class="imagen-principio-2 imagen-fondo "></div>
-                    <p class="alinear-texto-c tres-columnas-p ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores incidunt optio fugiat sint accusamus fudw</p>
-                </div>
+                    <div>
+                        <div class="imagen-principio-2 imagen-fondo "></div>
+                        <p class="alinear-texto-c tres-columnas-p ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores incidunt optio fugiat sint accusamus fudw</p>
+                    </div>
 
-                <div>
-                    <div class="imagen-principio-3 imagen-fondo "></div>
-                    <p class="alinear-texto-c ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores incidunt optio fugiat sint accusamus fudw</p>
+                    <div>
+                        <div class="imagen-principio-3 imagen-fondo "></div>
+                        <p class="alinear-texto-c ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores incidunt optio fugiat sint accusamus fudw</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section>
-        <div class="contenedor diseño-principal padd-bott ">
-            <h2>Lorem ipsum </h2>
+        <div class="contenedor diseño-principal padding-top margin-top-2rem padding-bottom">
+            <div class="contenedor-2">
+                <h2>Lorem ipsum </h2>
 
-            <div class="no-padding-ul ">
+                <div class="no-padding-ul ">
 
-                <div class="listas-grid alinear-texto-c no-padding-ul ">
+                    <div class="listas-grid alinear-texto-c no-padding-ul ">
 
-                    <div class="lista-diseño ">
-                        <div class="imagen-fondo-carro-herramientas ">
-                            <div class="height100 centar-con-flex ">
-                                <i class="fas fa-tools "></i>
-                                <p>Lorem, ipsum: dolor sit amet consectetur adipisicing elit. Dolores consequatur optio aliquam, assumenda ipsum!</p>
+                        <div class="lista-diseño ">
+                            <div class="imagen-fondo-carro-herramientas ">
+                                <div class="height100 centar-con-flex ">
+                                    <i class="fas fa-tools "></i>
+                                    <p>Lorem, ipsum: dolor sit amet consectetur adipisicing elit. Dolores consequatur optio aliquam, assumenda ipsum!</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="lista-diseño ">
-                        <div class="imagen-fondo-carro-herramientas ">
-                            <div class="height100 centar-con-flex ">
-                                <i class="fas fa-tools "></i>
-                                <p>Lorem, ipsum: dolor sit amet consectetur adipisicing elit assumenda ipsum!</p>
+                        <div class="lista-diseño ">
+                            <div class="imagen-fondo-carro-herramientas ">
+                                <div class="height100 centar-con-flex ">
+                                    <i class="fas fa-tools "></i>
+                                    <p>Lorem, ipsum: dolor sit amet consectetur adipisicing elit assumenda ipsum!</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="lista-diseño ">
-                        <div class="imagen-fondo-carro-herramientas ">
-                            <div class="height100 centar-con-flex ">
-                                <i class="fas fa-tools "></i>
-                                <p>Lorem, ipsum: dolor sit amet consectetur adipisicing elit. Dolores consequatur , consectetur adipisicing elit. Beatae </p>
+                        <div class="lista-diseño ">
+                            <div class="imagen-fondo-carro-herramientas ">
+                                <div class="height100 centar-con-flex ">
+                                    <i class="fas fa-tools "></i>
+                                    <p>Lorem, ipsum: dolor sit amet consectetur adipisicing elit. Dolores consequatur , consectetur adipisicing elit. Beatae </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="lista-diseño listas-none ">
-                        <div class="imagen-fondo-carro-herramientas ">
-                            <div class="height100 centar-con-flex ">
-                                <i class="fas fa-tools "></i>
-                                <p>Lorem, ipsum, voluptates veritatis assumenda ipsum!</p>
+                        <div class="lista-diseño listas-none ">
+                            <div class="imagen-fondo-carro-herramientas ">
+                                <div class="height100 centar-con-flex ">
+                                    <i class="fas fa-tools "></i>
+                                    <p>Lorem, ipsum, voluptates veritatis assumenda ipsum!</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="lista-diseño listas-none ">
-                        <div class="imagen-fondo-carro-herramientas ">
-                            <div class="height100 centar-con-flex ">
-                                <i class="fas fa-tools "></i>
-                                <p>Lorem, ipsum: dolor sit amet consectetur adipisicing elit. Dolores consequatur facilis necessitatibus dolores magni odio excepturi modi consequuntur.</p>
+                        <div class="lista-diseño listas-none ">
+                            <div class="imagen-fondo-carro-herramientas ">
+                                <div class="height100 centar-con-flex ">
+                                    <i class="fas fa-tools "></i>
+                                    <p>Lorem, ipsum: dolor sit amet consectetur adipisicing elit. Dolores consequatur facilis necessitatibus dolores magni odio excepturi modi consequuntur.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="lista-diseño listas-none ">
-                        <div class="imagen-fondo-carro-herramientas ">
-                            <div class="height100 centar-con-flex ">
-                                <i class="fas fa-tools "></i>
-                                <p>Lorem, ipsum: dolor sit amet consectetur adipisicing elit. Dolores consequatur optio aliquam, voluptates veritatis assumenda ipsum!</p>
+                        <div class="lista-diseño listas-none ">
+                            <div class="imagen-fondo-carro-herramientas ">
+                                <div class="height100 centar-con-flex ">
+                                    <i class="fas fa-tools "></i>
+                                    <p>Lorem, ipsum: dolor sit amet consectetur adipisicing elit. Dolores consequatur optio aliquam, voluptates veritatis assumenda ipsum!</p>
+                                </div>
                             </div>
                         </div>
+
                     </div>
+
 
                 </div>
-
-
             </div>
         </div>
     </section>
 
-    <section>
+    <section class="margin-top-2rem">
         <div class="imagen-fondo-dos imagen-fondo ">
             <div class="color-fondo-oscuro-dos ">
                 <div class=" contenedor contenido-img-dos ">
@@ -320,17 +284,19 @@
         </div>
     </section>
 
-    <section>
-        <div class="contenedor diseño-principal padd-bott marg-top">
-            <div class=" grid-dos-columnas ">
-                <div>
-                    <h2>Lorem ipsum </h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus temporibus sequi repellat facilis, aspernatur laboriosam at beatae sint eaque nulla necessitatibus expedita ratione ?</p>
-                    <p>Lorem ipsum dolor sit amet illum, impedit maxime alias atque? Totam, iste qui?</p>
-                </div>
+    <section class="margin-top-2rem">
+        <div class="contenedor diseño-principal padding-top padding-bottom">
+            <div class="contenedor-2">
+                <div class=" grid-dos-columnas ">
+                    <div>
+                        <h2>Lorem ipsum </h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus temporibus sequi repellat facilis, aspernatur laboriosam at beatae sint eaque nulla necessitatibus expedita ratione ?</p>
+                        <p>Lorem ipsum dolor sit amet illum, impedit maxime alias atque? Totam, iste qui?</p>
+                    </div>
 
-                <div>
-                    <div class="imagen-fondo-seccion imagen-fondo "></div>
+                    <div>
+                        <div class="imagen-fondo-seccion imagen-fondo "></div>
+                    </div>
                 </div>
             </div>
         </div>
