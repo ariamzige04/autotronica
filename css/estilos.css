@@ -10,13 +10,14 @@ html {
  :root {
     --fuenteprincipal: 'Mukta', sans-serif;
     --primario: #1b1b1b;
-    --secundario: #db0b0b;
+    --secundario: #e91f1f;
+    /**db0b0b**/
     --gris: #eeeeee;
     --blanco: #ffffff;
     --negro: #252525;
     --negro-claro: #2e2e2e;
     --tamañofuente: 2rem;
-    --transition: .5s all!important;
+    --transition: .4s all!important;
     --color-html: #e9e9e9;
 }
 
@@ -316,6 +317,8 @@ li {
 .hader-dos-columnas h1 {
     color: var(--blanco);
     text-align: center;
+    position: relative;
+    z-index: 100;
 }
 
 .hader-dos-columnas a {
@@ -325,8 +328,6 @@ li {
 
 .hader-dos-columnas h1 {
     text-align: left;
-    position: relative;
-    z-index: 100;
 }
 
 @media (min-width: 845px) {
@@ -341,7 +342,8 @@ li {
     }
 }
 
-.svg-carro {
+
+/**.svg-carro {
     position: absolute;
     top: var(--tamañofuente);
     right: var(--tamañofuente);
@@ -350,7 +352,7 @@ li {
     pointer-events: none;
     fill: var(--secundario);
     opacity: .2;
-}
+}**/
 
 
 /** FIN HEADER**/
@@ -739,8 +741,14 @@ li {
 }
 
 .fondo-rojo {
-    background-color: var(--secundario);
     padding: var(--tamañofuente);
+    background-color: var(--secundario);
+}
+
+@media (max-width: 600px) {
+    .fondo-rojo {
+        padding: var(--tamañofuente) 0;
+    }
 }
 
 .fondo-rojo h2,
@@ -757,6 +765,10 @@ li {
     border-radius: 3px;
     height: 40vh;
     width: 100%;
+}
+
+.grid-seccion-nosotros {
+    place-content: center;
 }
 
 @media (min-width: 768px) {
@@ -839,10 +851,17 @@ CONTACTO**/
     position: relative;
     left: 0;
     right: 0;
-    min-height: 200px;
-    height: calc(50vh - 0rem);
-    max-height: 50rem;
+    height: 40rem;
     border: 3px solid var(--secundario);
+    border-radius: 3px;
+}
+
+@media (min-width: 600px) {
+    .mapa {
+        min-height: 200px;
+        height: calc(50vh - 0rem);
+        max-height: 50rem;
+    }
 }
 
 .mapa iframe {
@@ -875,6 +894,15 @@ CONTACTO**/
     margin: auto;
 }
 
+.btn-ubicacion a:hover {
+    background-color: var(--negro-claro);
+    color: var(--blanco);
+}
+
+.btn-ubicacion a:hover i {
+    color: var(--blanco);
+}
+
 .flecha-animacion {
     display: flex;
     justify-content: center;
@@ -900,5 +928,5 @@ CONTACTO**/
     font-size: 5rem;
     text-align: center;
     color: var(--secundario);
-    text-shadow: 0px 0 10px #666666;
+    text-shadow: 0px 0 3px var(--secundario);
 }
