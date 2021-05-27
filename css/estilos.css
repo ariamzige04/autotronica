@@ -126,14 +126,25 @@ li {
 
 /* avegacion */
 
-.logo p {
-    padding-left: var(--tamañofuente);
-    color: var(--blanco)!important;
+.logo {
+    padding-left: 7%;
+}
+
+.autotronica {
+    background-image: url(../img/autotronica\ \(1\).png);
+    position: relative;
+    z-index: 1;
+    height: 6rem;
+    width: 10rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 3.5%;
     transition: var(--transition);
 }
 
-.logo p:hover {
-    color: var(--secundario)!important;
+.autotronica:hover {
+    background-color: var(--negro);
 }
 
 .nav-site {
@@ -142,7 +153,7 @@ li {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    box-shadow: 0px 1px 10px 0px rgb(0 0 0);
+    box-shadow: 0 3px 10px 0px var(--primario);
 }
 
 .nav {
@@ -156,7 +167,7 @@ li {
     color: var(--blanco);
     text-align: center;
     transform: translateX(-100%);
-    opacity: .97;
+    margin-right: 7%;
 }
 
 .nav i {
@@ -175,6 +186,7 @@ li {
     border: 2px solid transparent;
     margin: 2px;
     font-weight: bolder;
+    margin: 3px 1rem;
 }
 
 .nav a:hover {
@@ -223,7 +235,7 @@ li {
     border-color: var(--secundario);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 610px) {
     .hamburguesa {
         display: none;
     }
@@ -244,6 +256,7 @@ li {
         transition: var(--transition);
         font-weight: bolder;
         font-size: 1.6rem;
+        margin: 3px;
     }
     .nav a:last-of-type {
         margin-right: 0;
@@ -252,8 +265,8 @@ li {
         display: none;
     }
     .nav a:hover {
-        border: 2px solid var(--secundario);
-        background-color: var(--negro-claro);
+        border: 2px solid var(--blanco);
+        background-color: var(--negro);
     }
     .nav-seleccionado {
         border: 2px solid var(--primario)!important;
@@ -378,15 +391,14 @@ li {
     box-shadow: 0 1px 10px 0px rgb(0 0 0 / 72%);
 }
 
+.boton i {
+    padding-left: 1rem;
+}
+
 .boton:hover {
     background-color: var(--blanco);
     color: var(--primario);
     transform: scale(1.03);
-}
-
-.boton i {
-    padding-left: 1rem;
-    transition: var(--transition);
 }
 
 .boton-flex i {
@@ -411,6 +423,17 @@ li {
     display: none;
 }
 
+.imagen-main-circulo {
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    pointer-events: none;
+    box-shadow: 0 3px 10px 0px var(--primario);
+}
+
 @media (min-width: 825px) {
     .grid-main-dos-c {
         grid-template-columns: repeat(2, 1fr);
@@ -422,6 +445,9 @@ li {
         height: auto;
         display: block;
         border-radius: 3px;
+    }
+    .imagen-main-circulo {
+        display: none;
     }
 }
 
@@ -719,7 +745,7 @@ li {
 }
 
 .main-nosotros h4 {
-    font-size: 2.3rem;
+    font-size: var(--tamañofuente);
 }
 
 .main-nosotros h4,
@@ -876,15 +902,19 @@ CONTACTO**/
 
 .titulo-rows {
     position: relative;
-    top: 30%;
+}
+
+.heigth-auto-fondo {
+    position: relative;
+    height: 100%;
 }
 
 .linea-flecha {
     position: absolute;
-    top: 30%;
+    top: 0;
     left: calc(50% - 3px);
     border: 3px dashed var(--blanco);
-    height: 15%;
+    height: 100%;
     z-index: 0;
     opacity: .8;
 }
@@ -917,14 +947,14 @@ CONTACTO**/
         transform: translate(0, 0%);
     }
     100% {
-        transform: translate(0, 200%);
+        transform: translate(0, 100%);
     }
 }
 
 .flecha-animacion i {
     position: absolute;
-    top: 0;
-    animation: flecha 1s linear infinite;
+    top: -3px;
+    animation: flecha 1s cubic-bezier(0.55, 0.05, 0.24, 1.05) infinite;
     font-size: 5rem;
     text-align: center;
     color: var(--secundario);
