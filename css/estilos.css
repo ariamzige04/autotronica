@@ -57,7 +57,7 @@ h1,
 h2,
 h3,
 h4 {
-    color: var(--secundario);
+    color: var(--negro);
     text-align: center;
     font-weight: 700;
     margin: 0 0 1.5rem;
@@ -144,7 +144,7 @@ li {
 }
 
 .autotronica:hover {
-    background-color: var(--negro);
+    background-color: var(--secundario);
 }
 
 .nav-site {
@@ -356,18 +356,6 @@ li {
 }
 
 
-/**.svg-carro {
-    position: absolute;
-    top: var(--tamañofuente);
-    right: var(--tamañofuente);
-    z-index: 90;
-    width: 20%;
-    pointer-events: none;
-    fill: var(--secundario);
-    opacity: .2;
-}**/
-
-
 /** FIN HEADER**/
 
 .margin-auto {
@@ -413,42 +401,21 @@ li {
 
 /**boton fin**/
 
-.grid-main-dos-c {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-row: var(--tamañofuente);
+.main-index:hover .border-h2 {
+    width: 75%;
 }
 
-.imagen-main {
-    display: none;
-}
-
-.imagen-main-circulo {
-    display: block;
-    width: 10rem;
-    height: 10rem;
-    object-fit: cover;
-    border-radius: 50%;
+.border-h2 {
+    width: 50%;
+    height: 3px;
+    background-color: var(--secundario);
     margin: 0 auto 1.5rem;
-    pointer-events: none;
-    box-shadow: 0 3px 10px 0px var(--primario);
+    border-radius: 3px;
+    transition: var(--transition);
 }
 
-@media (min-width: 825px) {
-    .grid-main-dos-c {
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: var(--tamañofuente);
-        row-gap: var(--tamañofuente);
-    }
-    .imagen-main {
-        background-image: url(../img/reparacion-auto-compressed.jpg);
-        height: auto;
-        display: block;
-        border-radius: 3px;
-    }
-    .imagen-main-circulo {
-        display: none;
-    }
+.main-index p {
+    text-align: center;
 }
 
 .margin-0 {
