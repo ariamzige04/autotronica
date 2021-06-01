@@ -18,7 +18,81 @@
 </head>
 
 <body>
+    <!--LOADER-->
+    <style>
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: .4s all;
+        }
+        
+        .lds-ring {
+            display: inline-block;
+            position: relative;
+            width: 11rem;
+            height: 11rem;
+        }
+        
+        .lds-ring div {
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            width: 8rem;
+            height: 8rem;
+            margin: 8px;
+            border: 8px solid #db0b0b;
+            border-radius: 50%;
+            animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+            border-color: #db0b0b transparent transparent transparent;
+        }
+        
+        .lds-ring div:nth-child(1) {
+            animation-delay: -0.45s;
+        }
+        
+        .lds-ring div:nth-child(2) {
+            animation-delay: -0.3s;
+        }
+        
+        .lds-ring div:nth-child(3) {
+            animation-delay: -0.15s;
+        }
+        
+        @keyframes lds-ring {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 
+    <!-- Loading HTML -->
+    <div class="loader">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener("load", () => {
+            const cargador = document.querySelector(".loader")
+            cargador.style.opacity = 0
+            cargador.style.visibility = "hidden"
+        })
+    </script>
+    <!--fin loader-->
 
     <section class="imagen-fondo-nosotros imagen-fondo">
         <div class="color-fondo-oscuro fondo-negro-nosotros">
@@ -41,7 +115,7 @@
     <header class="header">
         <nav class=" nav-site ">
             <div class="logo">
-                <a href="index.html">
+                <a href="index.html" title="Ir a Inicio">
                     <div class="autotronica"></div>
                 </a>
             </div>
@@ -61,7 +135,7 @@
     <main>
         <div class="contenedor diseño-principal seccion-nosotros padding-top padding-bottom">
             <div class="padding-top">
-                <div class="contenedor-2">
+                <div class="contenedor-2 ">
                     <h2>Lorem ipsum </h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae sequi unde exercitationem facere id doloribus at numquam aspernatur officia, omnis voluptates cumque tenetur, aut ipsam dolorem magnam veritatis</p>
                     <div class="grid-main-dos-c main-nosotros">
@@ -146,7 +220,7 @@
 
     <footer class="footer">
         <a href="#">
-            <p>Autotronica 2021</p>
+            <p>Autotrónica 2021</p>
         </a>
 
     </footer>

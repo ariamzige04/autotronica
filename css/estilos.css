@@ -11,7 +11,7 @@ html {
     --fuenteprincipal: 'Mukta', sans-serif;
     --primario: #1b1b1b;
     --secundario: #e91f1f;
-    /**db0b0b**/
+    --rojo-oscuro: #8c1212;
     --gris: #eeeeee;
     --blanco: #ffffff;
     --negro: #252525;
@@ -144,7 +144,7 @@ li {
 }
 
 .autotronica:hover {
-    background-color: var(--secundario);
+    background-color: var(--negro-claro);
 }
 
 .nav-site {
@@ -269,12 +269,9 @@ li {
         background-color: var(--negro);
     }
     .nav-seleccionado {
-        border: 2px solid var(--primario)!important;
-        color: var(--secundario)!important;
-    }
-    .nav-seleccionado:hover {
-        border: 2px solid var(--primario)!important;
-        background-color: var(--primario)!important;
+        border: 2px solid var(--secundario)!important;
+        color: var(--blanco)!important;
+        cursor: default;
     }
     .contacto-seleccion {
         border: 2px solid var(--blanco)!important;
@@ -384,8 +381,8 @@ li {
 }
 
 .boton:hover {
-    background-color: var(--blanco);
-    color: var(--primario);
+    background-color: var(--rojo-oscuro);
+    color: var(--blanco);
     transform: scale(1.03);
 }
 
@@ -395,7 +392,7 @@ li {
 }
 
 .boton:hover i {
-    color: var(--primario);
+    color: var(--blanco);
 }
 
 
@@ -611,7 +608,7 @@ li {
 }
 
 .color-fondo-oscuro-dos {
-    background-color: rgb(45 0 0 / 48%);
+    background-color: rgba(0, 0, 0, 0.452);
     height: 100%;
     display: flex;
     justify-content: center;
@@ -661,17 +658,13 @@ li {
 
 .footer p {
     color: var(--blanco);
-    transition: var(--transition);
-}
-
-.footer p:hover {
-    color: var(--secundario);
 }
 
 
 /**NOSOTROS **/
 
 .imagen-fondo-nosotros {
+    background-color: var(--primario);
     background-image: url(../img/carro-blanco-nosotros-dos.jpg);
     min-height: 200px;
     height: 50vh;
@@ -705,6 +698,11 @@ li {
     .seccion-nosotros h2 {
         text-align: center;
     }
+    .grid-main-dos-c {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: var(--tamañofuente);
+    }
 }
 
 .no-margin {
@@ -713,6 +711,7 @@ li {
 
 .main-nosotros h4 {
     font-size: var(--tamañofuente);
+    text-align: left;
 }
 
 .main-nosotros h4,
@@ -735,7 +734,7 @@ li {
 
 .fondo-rojo {
     padding: var(--tamañofuente);
-    background-color: var(--secundario);
+    background-color: var(--rojo-oscuro);
 }
 
 @media (max-width: 600px) {
@@ -785,6 +784,7 @@ li {
 CONTACTO**/
 
 .imagen-fondo-contacto {
+    background-color: var(--primario);
     background-image: url(../img/seccion-contacto-compressed.jpg);
     min-height: 200px;
     height: 50vh;
@@ -892,11 +892,7 @@ CONTACTO**/
 }
 
 .btn-ubicacion a:hover {
-    background-color: var(--negro-claro);
-    color: var(--blanco);
-}
-
-.btn-ubicacion a:hover i {
+    background-color: var(--rojo-oscuro);
     color: var(--blanco);
 }
 
