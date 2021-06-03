@@ -370,7 +370,6 @@ li {
 .boton:hover {
     background-color: var(--secundario);
     color: var(--blanco);
-    transform: scale(1.03);
 }
 
 .boton-flex i {
