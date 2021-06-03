@@ -163,11 +163,12 @@ li {
     position: absolute;
     top: 100%;
     left: 0;
-    background: var(--negro-claro);
+    background: var(--negro);
     color: var(--blanco);
     text-align: center;
     transform: translateX(-100%);
     margin-right: 7%;
+    opacity: .98;
 }
 
 .nav i {
@@ -213,15 +214,6 @@ li {
     color: var(--blanco);
     transition: var(--transition);
     border: 2px solid var(--blanco);
-    animation: nav 1.5s linear infinite;
-}
-
-@keyframes nav {
-    0%,
-    100% {}
-    50% {
-        border-color: var(--primario);
-    }
 }
 
 .hamburguesa-margen i {
@@ -331,11 +323,6 @@ li {
     z-index: 100;
 }
 
-.hader-dos-columnas a {
-    display: table!important;
-    margin: auto;
-}
-
 .hader-dos-columnas h1 {
     text-align: left;
 }
@@ -363,11 +350,10 @@ li {
 /**boton **/
 
 .boton {
-    display: inline-block;
     padding: 1.6rem 3rem;
     margin: 2rem 0;
-    background-color: var(--secundario);
-    color: var(--blanco);
+    background-color: var(--blanco);
+    color: var(--primario);
     text-transform: uppercase;
     border-radius: 3px;
     text-align: center;
@@ -378,10 +364,11 @@ li {
 
 .boton i {
     padding-left: 1rem;
+    color: var(--secundario);
 }
 
 .boton:hover {
-    background-color: var(--rojo-oscuro);
+    background-color: var(--secundario);
     color: var(--blanco);
     transform: scale(1.03);
 }
@@ -393,6 +380,25 @@ li {
 
 .boton:hover i {
     color: var(--blanco);
+}
+
+.hader-dos-columnas a {
+    display: table;
+    margin: auto;
+}
+
+.contenido-img-dos a {
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+
+@media (max-width: 600px) {
+    .boton {
+        width: 100%!important;
+    }
 }
 
 
@@ -622,13 +628,6 @@ li {
     width: 100%;
 }
 
-.contenido-img-dos a {
-    margin: 2rem auto;
-    display: flex;
-    justify-content: center;
-    width: fit-content;
-}
-
 .imagen-fondo-seccion {
     background-image: url(../img/mustang-rojo-compressed.jpg);
     height: 50vh;
@@ -666,16 +665,17 @@ li {
 .imagen-fondo-nosotros {
     background-color: var(--primario);
     background-image: url(../img/carro-blanco-nosotros-dos.jpg);
-    min-height: 200px;
-    height: 50vh;
-    max-height: 50rem;
+    height: auto;
 }
 
 .fondo-negro-nosotros {
-    height: 100%;
+    min-height: min-content;
+    height: 40vh;
+    max-height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: var(--tamañofuente);
 }
 
 .imagen-fondo-nosotros h1 {
@@ -709,15 +709,24 @@ li {
     margin: 0!important;
 }
 
-.main-nosotros h4 {
-    font-size: var(--tamañofuente);
-    text-align: left;
-}
-
-.main-nosotros h4,
+.main-nosotros h3,
 .main-nosotros p {
     color: var(--primario);
-    margin: 2rem 0;
+    margin: 0 0 var(--tamañofuente);
+}
+
+.main-nosotros h3 {
+    text-align: left;
+    font-size: var(--tamañofuente);
+}
+
+.main-nosotros p {
+    margin: var(--tamañofuente) 0;
+}
+
+.main-nosotros p:last-of-type {
+    margin: var(--tamañofuente) 0 0;
+    padding-bottom: var(--tamañofuente);
 }
 
 .imagen-main-nosotros-uno {
@@ -734,7 +743,7 @@ li {
 
 .fondo-rojo {
     padding: var(--tamañofuente);
-    background-color: var(--rojo-oscuro);
+    background-color: var(--negro-claro);
 }
 
 @media (max-width: 600px) {
@@ -786,9 +795,7 @@ CONTACTO**/
 .imagen-fondo-contacto {
     background-color: var(--primario);
     background-image: url(../img/seccion-contacto-compressed.jpg);
-    min-height: 200px;
-    height: 50vh;
-    max-height: 50rem;
+    height: auto;
 }
 
 .imagen-fondo-contacto h1 {
@@ -818,7 +825,7 @@ CONTACTO**/
 
 .contacto-redes-sociales a {
     text-align: center;
-    border: 2px solid var(--secundario);
+    border: 3px solid var(--secundario);
     border-radius: 3px;
     display: flex;
     justify-content: center;
@@ -831,7 +838,7 @@ CONTACTO**/
 
 .contacto-redes-sociales a:hover {
     color: var(--secundario);
-    border: 2px solid var(--primario);
+    border: 3px solid var(--primario);
 }
 
 .rows-dos {
@@ -844,27 +851,26 @@ CONTACTO**/
     position: relative;
     left: 0;
     right: 0;
-    height: 40rem;
+    min-height: 200px;
+    height: 50vh;
+    max-height: 50rem;
+    background-image: url(../img/mapa-pelicano-431-palmas.JPG);
     border: 3px solid var(--secundario);
     border-radius: 3px;
+    transition: var(--transition);
 }
 
-@media (min-width: 600px) {
-    .mapa {
-        min-height: 200px;
-        height: calc(50vh - 0rem);
-        max-height: 50rem;
-    }
-}
-
-.mapa iframe {
-    width: 100%;
-    height: 100%;
+.mapa:hover {
+    border-color: var(--primario);
 }
 
 .ubicacion i {
     text-align: center;
     padding-left: 1rem;
+}
+
+.ubicacion {
+    padding-bottom: var(--tamañofuente);
 }
 
 .titulo-rows {
@@ -876,23 +882,10 @@ CONTACTO**/
     height: 100%;
 }
 
-.linea-flecha {
-    position: absolute;
-    top: 0;
-    left: calc(50% - 3px);
-    border: 3px dashed var(--blanco);
-    height: 100%;
-    z-index: 0;
-    opacity: .8;
-}
-
-.btn-ubicacion {
+.btn-ubicacion a {
     display: table;
-    margin: auto;
-}
-
-.btn-ubicacion a:hover {
-    background-color: var(--rojo-oscuro);
+    margin: var(--tamañofuente) auto 0;
+    background-color: var(--negro-claro);
     color: var(--blanco);
 }
 
@@ -900,26 +893,26 @@ CONTACTO**/
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto;
+    height: 100%;
     position: relative;
     z-index: 10;
 }
 
-@keyframes flecha {
-    0% {
-        transform: translate(0, 0%);
-    }
-    100% {
-        transform: translate(0, 100%);
-    }
+.flecha-animacion i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    border: 3px solid var(--blanco);
+    font-size: 4rem;
+    text-align: center;
+    color: var(--blanco);
+    transition: var(--transition);
 }
 
-.flecha-animacion i {
-    position: absolute;
-    top: -3px;
-    animation: flecha 1s cubic-bezier(0.55, 0.05, 0.24, 1.05) infinite;
-    font-size: 5rem;
-    text-align: center;
+.flecha-animacion:hover i {
+    border-color: var(--secundario);
     color: var(--secundario);
-    text-shadow: 0px 0 3px var(--secundario);
 }
