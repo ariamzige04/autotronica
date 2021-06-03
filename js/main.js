@@ -6,3 +6,9 @@ hamburguesa.addEventListener("click", () => {
 
     hamburguesa.classList.toggle("hamburguesaAnimacion");
 });
+
+window.addEventListener("load", () => {
+    const cargador = document.querySelector(".loader");
+    cargador.style.opacity = 0;
+    cargador.style.visibility = "hidden";
+})

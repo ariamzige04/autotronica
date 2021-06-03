@@ -131,7 +131,7 @@ li {
 }
 
 .autotronica {
-    background-image: url(../img/autotronica\ \(1\).png);
+    background-image: url(../img/autotronica.png);
     position: relative;
     z-index: 1;
     height: 6rem;
@@ -285,7 +285,7 @@ li {
     background-color: var(--primario);
     background-image: url(../img/350z-header.jpg);
     position: relative;
-    min-height: 400px;
+    min-height: min-content;
     height: 100vh;
     max-height: 825px;
 }
@@ -658,6 +658,14 @@ li {
     color: var(--blanco);
 }
 
+#abajo-contacto,
+#abajo-nosotros {
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+    -o-tap-highlight-color: rgba(0, 0, 0, 0);
+    -ms-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 
 /**NOSOTROS **/
 
@@ -669,8 +677,8 @@ li {
 
 .fondo-negro-nosotros {
     min-height: min-content;
-    height: 40vh;
-    max-height: 500px;
+    height: 100vh;
+    max-height: 825px;
     display: flex;
     justify-content: center;
     align-items: center;
