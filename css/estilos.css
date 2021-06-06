@@ -635,7 +635,7 @@ li {
 }
 
 .imagen-fondo-seccion {
-    background-image: url(../img/mustang-rojo-compressed.jpg);
+    background-image: url(../img/mustang-rojo-compressed-compressed.jpg);
     height: 50vh;
     border-radius: 3px;
 }
@@ -678,7 +678,7 @@ li {
 
 .imagen-fondo-nosotros {
     background-color: var(--primario);
-    background-image: url(../img/carro-blanco-nosotros-dos-compressed.jpg);
+    background-image: url(../img/carro-blanco-nosotros-dos-compressed-compressed.jpg);
     height: auto;
 }
 
@@ -808,7 +808,7 @@ CONTACTO**/
 
 .imagen-fondo-contacto {
     background-color: var(--primario);
-    background-image: url(../img/seccion-contacto-compressed-compressed.jpg);
+    background-image: url(../img/seccion-contacto-compressed-compressed-compressed.jpg);
     height: auto;
 }
 
