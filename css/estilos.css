@@ -684,7 +684,7 @@ li {
 
 .fondo-negro-nosotros {
     min-height: min-content;
-    height: 50vh;
+    height: 40vh;
     max-height: 825px;
     display: flex;
     justify-content: center;
