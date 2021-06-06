@@ -283,7 +283,7 @@ li {
 
 .header-imagen {
     background-color: var(--primario);
-    background-image: url(../img/350z-header.jpg);
+    background-image: url(../img/350z-header-compressed.jpg);
     position: relative;
     min-height: min-content;
     height: 100vh;
@@ -418,6 +418,13 @@ li {
 
 .main-index p {
     text-align: center;
+}
+
+@media (min-width: 768px) {
+    .main-index p {
+        width: 75%;
+        margin: auto;
+    }
 }
 
 .margin-0 {
@@ -671,13 +678,13 @@ li {
 
 .imagen-fondo-nosotros {
     background-color: var(--primario);
-    background-image: url(../img/carro-blanco-nosotros-dos.jpg);
+    background-image: url(../img/carro-blanco-nosotros-dos-compressed.jpg);
     height: auto;
 }
 
 .fondo-negro-nosotros {
     min-height: min-content;
-    height: 100vh;
+    height: 50vh;
     max-height: 825px;
     display: flex;
     justify-content: center;
@@ -801,7 +808,7 @@ CONTACTO**/
 
 .imagen-fondo-contacto {
     background-color: var(--primario);
-    background-image: url(../img/seccion-contacto-compressed.jpg);
+    background-image: url(../img/seccion-contacto-compressed-compressed.jpg);
     height: auto;
 }
 
@@ -832,7 +839,7 @@ CONTACTO**/
 
 .contacto-redes-sociales a {
     text-align: center;
-    border: 3px solid var(--secundario);
+    border: 2px solid var(--secundario);
     border-radius: 3px;
     display: flex;
     justify-content: center;
@@ -845,7 +852,7 @@ CONTACTO**/
 
 .contacto-redes-sociales a:hover {
     color: var(--secundario);
-    border: 3px solid var(--primario);
+    border: 2px solid var(--primario);
 }
 
 .rows-dos {
@@ -916,10 +923,12 @@ CONTACTO**/
     font-size: 4rem;
     text-align: center;
     color: var(--blanco);
+    box-shadow: 0px 0px 3px 0px var(--blanco);
     transition: var(--transition);
 }
 
-.flecha-animacion:hover i {
+.fondo-negro-nosotros:hover .flecha-animacion i {
     border-color: var(--secundario);
     color: var(--secundario);
+    box-shadow: 0px 0px 3px 0px var(--secundario);
 }
