@@ -1,1 +1,157 @@
-<!DOCTYPE html><html lang="es"><head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Contacto Autotrónica</title> <meta name="description" content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, ab eos deserunt illum atque voluptas, voluptates tempore sint nulla, odio quo? Adipisci recusandae rerum natus tempore fuga? Pariatur, est."> <link rel="stylesheet" href="css/normalize.css"> <link rel="stylesheet" href="css/estilos.css"> <link rel="shortcut icon" href="img/logo-autotronica.svg" type="image/x-icon"></head><body> <!--LOADER--> <style> .loader { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: white; display: flex; justify-content: center; align-items: center; z-index: 9999; transition: 1s all; } .lds-ring { display: inline-block; position: relative; width: 11rem; height: 11rem; } .lds-ring div { box-sizing: border-box; display: block; position: absolute; width: 8rem; height: 8rem; margin: 8px; border: 8px solid #db0b0b; border-radius: 50%; animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite; border-color: #db0b0b transparent transparent transparent; } .lds-ring div:nth-child(1) { animation-delay: -0.45s; } .lds-ring div:nth-child(2) { animation-delay: -0.3s; } .lds-ring div:nth-child(3) { animation-delay: -0.15s; } @keyframes lds-ring { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } } </style> <!-- Loading HTML --> <div class="loader"> <div class="lds-ring"> <div></div> <div></div> <div></div> </div> </div> <!--fin loader--> <!--fin loader--> <section class="imagen-fondo-contacto imagen-fondo"> <a href="#abajo-contacto"> <div class="color-fondo-oscuro fondo-negro-nosotros"> <div class="rows-dos"> <div class="titulo-rows"> <h1>Contacto</h1> </div> <div class="heigth-auto-fondo"> <div class=" flecha-animacion"> <i class="fas fa-arrow-down"></i> </div> </div> </div> </div> </a> </section> <header class="header" id="abajo-contacto"> <nav class=" nav-site "> <div class="logo"> <a href="index.html" title="Ir a Inicio"> <div class="autotronica"></div> </a> </div> <div class="nav"> <!--nav--> <a class=" " href="index.html">Inicio<i class="fas fa-house-user"></i></a> <a class="" href="nosotros.html">Nosotros<i class="fas fa-car-alt"></i></a> <a class="nav-seleccionado " href="#">Contacto<i class="far fa-envelope"></i></a> <!--nav--> </div> <div class="hamburguesa hamburguesa-margen" id="hamburguesa"> <i class="fas fa-bars"></i> </div> </nav> </header> <main> <div class="diseño-principal contenedor padding-bottom padding-top"> <div class="contenedor-2 padding-top"> <h2>Contáctanos</h2> <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque laboriosam optio porro. Quia quo vel eaque natus eum in nam perspiciatis quos, odit iste. Velit distinctio qui totam nam ex!</p> <div class="contacto-redes-sociales"> <div> <a href="https://www.facebook.com/carkeypcm/" target="_blank" title="Facebook" rel="noopener noreferrer"> <i class="fab fa-facebook-f"></i> </a> </div> <div> <a href="https://instagram.com/carkey_mty?igshid=1mus14gfdq5vo" target="_blank" title="Instagram" rel="noopener noreferrer"> <i class="fab fa-instagram"></i> </a> </div> <div> <a href="https://api.whatsapp.com/send?phone=+528119385235" target="_blank" title="WhatsApp" rel="noopener noreferrer"> <i class="fab fa-whatsapp "></i> </a> </div> <div> <a href="https://m.me/carkeypcm/" target="_blank" title="Messenger" rel="noopener noreferrer"> <i class="fab fa-facebook-messenger "></i> </a> </div> <div> <a href="mailto:gomezcarkey@yahoo.com.mx?Subject=Hola" target="_blank" title="Correo" rel="noopener noreferrer"> <i class="far fa-envelope"></i> </a> </div> <div> <a href="tel:+528119385235" target="_blank" title="Telefono" rel="noopener noreferrer"> <i class="fas fa-phone-alt"></i> </a> </div> </div> </div> </div> </main> <section> <div class="ubicacion diseño-principal contenedor "> <div class="contenedor-2"> <h2>Ubicacion<i class="fas fa-map-marker-alt"></i></h2> <a href="https://goo.gl/maps/3WshbV1mjfwBvEEz8" target="_blank" title="Pelícano 431, Paseo de Las Palmas, 66635 Cd Apodaca, N.L." rel="noopener noreferrer"> <div class="mapa imagen-fondo"></div> </a> <div class="btn-ubicacion"> <a class="boton margin-auto " target="_blank" rel="noopener noreferrer" title="Pelícano 431, Paseo de Las Palmas, 66635 Cd Apodaca, N.L." href="https://goo.gl/maps/3WshbV1mjfwBvEEz8">Abrir Mapa<i class="fas fa-arrow-right"></i></a> </div> </div> </div> </section> <footer class="footer "> <a href="#"> <p>Autotrónica 2021</p> </a> </footer></body><script type="text/javascript" src="js/main.js" async="async"></script><script src="https://kit.fontawesome.com/c15b744a04.js " crossorigin="anonymous"></script></section>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto Autotrónica</title>
+    <meta name="description" content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, ab eos deserunt illum atque voluptas, voluptates tempore sint nulla, odio quo? Adipisci recusandae rerum natus tempore fuga? Pariatur, est.">
+
+
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preload" href="css/estilos.css" as="style">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="shortcut icon" href="img/logo-autotronica.svg" type="image/x-icon">
+
+</head>
+
+<body>
+
+
+    <!-- Loading HTML -->
+    <div class="loader">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!--fin loader-->
+    <!--fin loader-->
+    <section class="imagen-fondo-contacto imagen-fondo">
+        <a href="#abajo-contacto">
+            <div class="color-fondo-oscuro fondo-negro-nosotros">
+
+                <div class="rows-dos">
+                    <div class="titulo-rows">
+                        <h1>Contacto</h1>
+                    </div>
+
+                    <div class="heigth-auto-fondo">
+                        <div class=" flecha-animacion">
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </a>
+    </section>
+
+    <header class="header" id="abajo-contacto">
+        <nav class=" nav-site ">
+            <div class="logo">
+                <a href="index.html" title="Ir a Inicio">
+                    <div class="autotronica"></div>
+                </a>
+            </div>
+            <div class="nav">
+                <!--nav-->
+                <a class=" " href="index.html">Inicio<i class="fas fa-house-user"></i></a>
+                <a class="" href="nosotros.html">Nosotros<i class="fas fa-car-alt"></i></a>
+                <a class="nav-seleccionado " href="#">Contacto<i class="far fa-envelope"></i></a>
+                <!--nav-->
+            </div>
+            <div class="hamburguesa hamburguesa-margen" id="hamburguesa">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="diseño-principal contenedor padding-bottom padding-top">
+            <div class="contenedor-2 padding-top">
+                <h2>Contáctanos</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque laboriosam optio porro. Quia quo vel eaque natus eum in nam perspiciatis quos, odit iste. Velit distinctio qui totam nam ex!</p>
+                <div class="contacto-redes-sociales">
+
+                    <div>
+                        <a href="https://www.facebook.com/carkeypcm/" target="_blank" title="Facebook" rel="noopener noreferrer">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="https://instagram.com/carkey_mty?igshid=1mus14gfdq5vo" target="_blank" title="Instagram" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="https://api.whatsapp.com/send?phone=+528119385235" target="_blank" title="WhatsApp" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp "></i>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="https://m.me/carkeypcm/" target="_blank" title="Messenger" rel="noopener noreferrer">
+                            <i class="fab fa-facebook-messenger "></i>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="mailto:gomezcarkey@yahoo.com.mx?Subject=Hola" target="_blank" title="Correo" rel="noopener noreferrer">
+                            <i class="far fa-envelope"></i>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="tel:+528119385235" target="_blank" title="Telefono" rel="noopener noreferrer">
+                            <i class="fas fa-phone-alt"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <section>
+        <div class="ubicacion diseño-principal contenedor ">
+            <div class="contenedor-2">
+                <h2>Ubicacion<i class="fas fa-map-marker-alt"></i></h2>
+
+                <a href="https://goo.gl/maps/3WshbV1mjfwBvEEz8" target="_blank" title="Pelícano 431, Paseo de Las Palmas, 66635 Cd Apodaca, N.L." rel="noopener noreferrer">
+
+                    <div class="mapa imagen-fondo"></div>
+
+                </a>
+                <div class="btn-ubicacion">
+                    <a class="boton margin-auto " target="_blank" rel="noopener noreferrer" title="Pelícano 431, Paseo de Las Palmas, 66635 Cd Apodaca, N.L." href="https://goo.gl/maps/3WshbV1mjfwBvEEz8">Abrir Mapa<i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer class="footer ">
+        <a href="#">
+            <p>Autotrónica 2021</p>
+        </a>
+
+    </footer>
+
+</body>
+
+
+<script src="https://kit.fontawesome.com/c15b744a04.js " async="async" crossorigin="anonymous "></script>
+<script type="text/javascript" src="js/main.js" async="async"></script>
+
+</section>
