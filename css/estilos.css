@@ -420,13 +420,6 @@ li {
     text-align: left;
 }
 
-@media (min-width: 768px) {
-    .main-index p {
-        width: 75%;
-        margin: auto;
-    }
-}
-
 .margin-0 {
     margin: 0;
 }
@@ -564,7 +557,7 @@ li {
     position: relative;
     top: 0;
     left: 0;
-    height: 15rem;
+    height: 11rem;
 }
 
 @media (max-width: 767px) {
@@ -575,7 +568,7 @@ li {
 
 @media (min-width: 768px) {
     .lista-diseño {
-        height: 25rem;
+        height: 15rem;
     }
 }
 
