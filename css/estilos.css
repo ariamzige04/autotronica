@@ -91,10 +91,10 @@ li {
         font-size: 3.5rem;
     }
     h2 {
-        font-size: 2.8rem;
+        font-size: 2.3rem;
     }
     h3 {
-        font-size: 2.4rem;
+        font-size: 2.3rem;
     }
     h4 {
         font-size: 1.8rem;
@@ -417,7 +417,7 @@ li {
 }
 
 .main-index p {
-    text-align: center;
+    text-align: left;
 }
 
 @media (min-width: 768px) {
@@ -628,7 +628,7 @@ li {
     padding: 2rem 1rem 0;
 }
 
-.imagen-fondo-dos h3,
+.imagen-fondo-dos h2,
 .imagen-fondo-dos p {
     color: var(--blanco);
     width: 100%;
