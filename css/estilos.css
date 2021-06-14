@@ -583,7 +583,6 @@ li {
 }
 
 .lista-diseño:hover i {
-    opacity: .95;
     color: var(--primario);
     text-shadow: 0px 0 2px var(--primario);
 }
