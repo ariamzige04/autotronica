@@ -8,10 +8,14 @@
     <title>Autotrónica | Computadoras Automotrices</title>
     <meta name="description" content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, ab eos deserunt illum atque voluptas, voluptates tempore sint nulla, odio quo? Adipisci recusandae rerum natus tempore fuga? Pariatur, est.">
 
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/estilos.css">
-    <link rel="shortcut icon" href="img/logo-autotronica.svg" type="image/x-icon">
+    <link rel="preload" href="css/estilos.css" as="style">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+
+    <link rel="shortcut icon" href="img/autotronica-icono.svg" type="image/x-icon">
+
     <link rel="prefetch" href="nosotros.html">
     <link rel="prefetch" href="contacto.html">
 
@@ -19,69 +23,12 @@
 
 <body>
 
-    <style type="text/css">
-        .loader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: 1s all;
-        }
-        
-        .lds-ring {
-            display: inline-block;
-            position: relative;
-            width: 11rem;
-            height: 11rem;
-        }
-        
-        .lds-ring div {
-            box-sizing: border-box;
-            display: block;
-            position: absolute;
-            width: 8rem;
-            height: 8rem;
-            margin: 8px;
-            border: 8px solid #db0b0b;
-            border-radius: 50%;
-            animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-            border-color: #db0b0b transparent transparent transparent;
-        }
-        
-        .lds-ring div:nth-child(1) {
-            animation-delay: -0.45s;
-        }
-        
-        .lds-ring div:nth-child(2) {
-            animation-delay: -0.3s;
-        }
-        
-        .lds-ring div:nth-child(3) {
-            animation-delay: -0.15s;
-        }
-        
-        @keyframes lds-ring {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
+    <!-- <style type="text/css">
+      
+    </style> -->
     <!-- Loading HTML -->
     <div class="loader">
-        <div class="lds-ring">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+        <div class="spinner"></div>
     </div>
 
 
@@ -284,9 +231,9 @@
 
     </footer>
 
-
+    <script src="https://kit.fontawesome.com/c15b744a04.js " crossorigin="anonymous" async></script>
     <script type="text/javascript" src="js/main.js" async></script>
-    <script src="https://kit.fontawesome.com/c15b744a04.js " crossorigin="anonymous "></script>
+
 </body>
 
 
