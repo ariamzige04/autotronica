@@ -9,13 +9,19 @@
     <meta name="description" content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, ab eos deserunt illum atque voluptas, voluptates tempore sint nulla, odio quo? Adipisci recusandae rerum natus tempore fuga? Pariatur, est.">
 
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+
+    <link rel="preload" href="css/estilos.css" as="style">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+
     <link rel="shortcut icon" href="img/autotronica-icono.svg" type="image/x-icon">
 
 </head>
 
 <body>
+
+
     <style type="text/css">
         .loader {
             position: fixed;
@@ -31,39 +37,16 @@
             transition: 1s all;
         }
         
-        .lds-ring {
-            display: inline-block;
-            position: relative;
-            width: 11rem;
-            height: 11rem;
-        }
-        
-        .lds-ring div {
-            box-sizing: border-box;
-            display: block;
-            position: absolute;
-            width: 8rem;
-            height: 8rem;
-            margin: 8px;
-            border: 8px solid #db0b0b;
+        .spinner {
+            width: 10rem;
+            height: 10rem;
+            border: 1rem solid transparent;
+            border-left-color: #e91f1f;
             border-radius: 50%;
-            animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-            border-color: #db0b0b transparent transparent transparent;
+            animation: spinner 1s ease infinite;
         }
         
-        .lds-ring div:nth-child(1) {
-            animation-delay: -0.45s;
-        }
-        
-        .lds-ring div:nth-child(2) {
-            animation-delay: -0.3s;
-        }
-        
-        .lds-ring div:nth-child(3) {
-            animation-delay: -0.15s;
-        }
-        
-        @keyframes lds-ring {
+        @keyframes spinner {
             0% {
                 transform: rotate(0deg);
             }
@@ -72,14 +55,9 @@
             }
         }
     </style>
-
     <!-- Loading HTML -->
     <div class="loader">
-        <div class="lds-ring">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+        <div class="spinner"></div>
     </div>
 
 
