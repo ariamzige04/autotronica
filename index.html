@@ -23,9 +23,40 @@
 
 <body>
 
-    <!-- <style type="text/css">
-      
-    </style> -->
+    <style type="text/css">
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: 1s all;
+        }
+        
+        .spinner {
+            width: 10rem;
+            height: 10rem;
+            border: 1rem solid transparent;
+            border-left-color: #e91f1f;
+            border-top-color: #e91f1f;
+            border-radius: 50%;
+            animation: spinner 1s ease infinite;
+        }
+        
+        @keyframes spinner {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
     <!-- Loading HTML -->
     <div class="loader">
         <div class="spinner"></div>
@@ -232,7 +263,7 @@
     </footer>
 
     <script src="https://kit.fontawesome.com/c15b744a04.js " crossorigin="anonymous" async></script>
-    <script type="text/javascript" src="js/main.js" async></script>
+    <script type="text/javascript" src="js/main.js"></script>
 
 </body>
 
