@@ -163,7 +163,7 @@ li {
 }
 
 .autotronica {
-    background-image: url(../img/autotronica.png);
+    background-image: url(../img/autotronica-logo.svg);
     position: absolute;
     z-index: 1;
     top: 0;
@@ -586,7 +586,7 @@ li {
 }
 
 .imagen-fondo-carro-herramientas {
-    background-image: url(../img/carro-herramienta.jpg);
+    background-image: url(../img/car-mecanic.svg);
     height: 100%;
     background-position: center center;
     background-repeat: no-repeat;
