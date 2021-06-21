@@ -6,6 +6,7 @@ html {
     scroll-behavior: smooth
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap');
 :root {
     --fuenteprincipal: 'Mukta', sans-serif;
     --primario: #1b1b1b;
