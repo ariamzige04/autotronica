@@ -337,14 +337,16 @@ li {
     z-index: 10;
     top: 0;
     height: 100%;
+    padding: 3px;
     display: flex;
-    width: 10rem;
+    overflow: visible;
     transition: var(--transition);
 }
 
 .autotronica img {
     object-fit: contain;
     pointer-events: none;
+    height: 100%;
 }
 
 .autotronica img::selection {
