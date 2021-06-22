@@ -363,7 +363,8 @@ li {
     border: 2px solid transparent;
     margin: 2px;
     font-weight: bolder;
-    margin: 3px 1rem
+    margin: 3px 1rem;
+    border-radius: 3px;
 }
 
 .nav a:hover {
