@@ -334,10 +334,10 @@ li {
 
 .autotronica {
     position: absolute;
-    z-index: 10;
+    z-index: 100;
     top: 0;
     height: 100%;
-    padding: 3px;
+    width: 8rem;
     display: flex;
     overflow: visible;
     transition: var(--transition);
