@@ -223,8 +223,18 @@ img {
 }
 
 .contenedor {
-    width: 93%;
+    width: 95%;
     max-width: 100rem;
+    margin: 0 auto
+}
+
+.diseño-principal {
+    background-color: var(--blanco)
+}
+
+.contenedor-2 {
+    width: 95%;
+    max-width: 90rem;
     margin: 0 auto
 }
 
@@ -609,16 +619,6 @@ li {
 
 .alinear-texto-c {
     text-align: center
-}
-
-.diseño-principal {
-    background-color: var(--blanco)
-}
-
-.contenedor-2 {
-    width: 93%;
-    max-width: 90rem;
-    margin: 0 auto
 }
 
 .padding-top {
