@@ -337,7 +337,7 @@ li {
     z-index: 100;
     top: 0;
     height: 100%;
-    width: 8rem;
+    width: 11rem;
     display: flex;
     overflow: visible;
     transition: var(--transition);
@@ -347,7 +347,7 @@ li {
     object-fit: contain;
     pointer-events: none;
     height: 100%;
-    width: 8rem;
+    width: 10rem;
 }
 
 .autotronica img::selection {
