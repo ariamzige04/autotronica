@@ -642,7 +642,9 @@ li {
 @media (max-width:599px) {
     .tres-columnas-p {
         padding-bottom: 1rem;
-        border-bottom: 3px solid var(--gris)
+    }
+    .tres-columnas-p {
+        text-align: left;
     }
 }
 
@@ -652,6 +654,9 @@ li {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 2rem;
         row-gap: 2rem
+    }
+    .tres-columnas-p {
+        text-align: center;
     }
 }
 
